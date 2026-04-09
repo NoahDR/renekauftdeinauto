@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- No-flash theme (must be first script) -->
+  <script>(function(){document.documentElement.setAttribute('data-theme','light');})()</script>
+
+  <!-- SEO -->
+  <title>Auto verkaufen – schnell, fair &amp; persönlich | renekauftdeinauto.de</title>
+  <meta name="description" content="Dein Auto schnell und fair verkaufen: Sofortige Bewertung, kostenlose Abholung vor Ort und direkte Bezahlung innerhalb von 24 Stunden. Jetzt kostenlos anfragen!">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#00b85d">
+  <meta property="og:locale" content="de_DE">
+  <meta name="geo.region" content="DE-BW">
+  <meta name="geo.placename" content="Aldingen">
+  <link rel="canonical" href="https://renekauftdeinauto.de">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://renekauftdeinauto.de">
+  <meta property="og:site_name" content="renekauftdeinauto">
+  <meta property="og:title" content="Auto verkaufen | Sofortankauf, fair & unkompliziert">
+  <meta property="og:description" content="Dein Auto schnell und fair verkaufen: Sofortige Bewertung, Abholung vor Ort, direkte Bezahlung innerhalb von 24 Stunden.">
+  <!-- og:image: Füge hier die absolute URL zu einem 1200×630px Vorschaubild ein -->
+  <!-- <meta property="og:image" content="https://renekauftdeinauto.de/og-image.jpg"> -->
+  <!-- <meta property="og:image:width" content="1200"> -->
+  <!-- <meta property="og:image:height" content="630"> -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Auto verkaufen | Sofortankauf, fair & unkompliziert">
+  <meta name="twitter:description" content="Dein Auto schnell und fair verkaufen: Sofortige Bewertung, Abholung vor Ort, direkte Bezahlung.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2300b85d'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' fill='%23ffffff' font-family='Arial' font-weight='bold' font-size='20'%3ER%3C/text%3E%3C/svg%3E">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "renekauftdeinauto",
+    "description": "Ich kaufe dein Auto – unkompliziert, fair und innerhalb von 24 Stunden. Sofortige Bewertung, Abholung vor Ort, direkte Bezahlung.",
+    "url": "https://renekauftdeinauto.de",
+    "telephone": "+4901717778519",
+    "email": "info@renekauftdeinauto.de",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Langäckerstraße 23",
+      "addressLocality": "Aldingen",
+      "postalCode": "78554",
+      "addressCountry": "DE"
+    },
+    "areaServed": { "@type": "Country", "name": "Deutschland" },
+    "sameAs": ["https://www.youtube.com/@Rene.Almasi"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wie schnell wird mein Auto bewertet?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ich bewerte dein Auto sofort nach deiner Anfrage und melde mich innerhalb weniger Stunden zurück." }
+      },
+      {
+        "@type": "Question",
+        "name": "Holt ihr das Auto bei mir ab?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ja – ich hole dein Auto deutschlandweit direkt bei dir ab, egal ob Hamburg, München oder Berlin." }
+      },
+      {
+        "@type": "Question",
+        "name": "Wann bekomme ich mein Geld?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Die Bezahlung erfolgt direkt bei der Abholung – sofort, bar oder per Überweisung, ohne Verzögerung." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts: loaded via JS only after consent (DSGVO) -->
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ═══════════════ LIGHT MODE (default) ═══════════════ */
+    :root {
+      --bg:           #f6f6f4;
+      --s1:           #edede9;
+      --s2:           #ffffff;
+      --s3:           #e4e4e0;
+      --border:       rgba(0,0,0,0.09);
+      --border-hi:    rgba(0,0,0,0.18);
+      --text:         #111111;
+      --text-2:       #5a5a5a;
+      --text-3:       #aaaaaa;
+      /* accent-text: dark green, 5.4:1 on white */
+      --accent:       #006e38;
+      /* accent-fill: bright green for buttons/badges */
+      --accent-fill:  #00b85d;
+      --accent-h:     #009f50;
+      --accent-dim:   rgba(0,110,56,0.08);
+      --accent-ring:  rgba(0,110,56,0.18);
+      --btn-text:     #ffffff;
+      --error:        #c0392b;
+      --error-dim:    rgba(192,57,43,0.1);
+      --shadow-card:  0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.05);
+      --shadow-hover: 0 4px 12px rgba(0,0,0,0.1), 0 16px 40px rgba(0,0,0,0.08);
+      --header-bg:    rgba(246,246,244,0.88);
+      --grain-blend:  multiply;
+      --grain-opacity:0.045;
+      --font:         'Space Grotesk', -apple-system, sans-serif;
+      --r:            12px;
+      --r-sm:         8px;
+      --max:          1200px;
+      --ease:         cubic-bezier(0.25, 0, 0, 1);
+    }
+
+    /* ═══════════════ DARK MODE ═══════════════ */
+    [data-theme="dark"] {
+      --bg:           #0a0a0a;
+      --s1:           #111111;
+      --s2:           #161616;
+      --s3:           #1d1d1d;
+      --border:       rgba(255,255,255,0.07);
+      --border-hi:    rgba(255,255,255,0.14);
+      --text:         #ededed;
+      --text-2:       #909090;
+      --text-3:       #606060;
+      --accent:       #00d26a;
+      --accent-fill:  #00d26a;
+      --accent-h:     #00b85d;
+      --accent-dim:   rgba(0,210,106,0.1);
+      --accent-ring:  rgba(0,210,106,0.22);
+      --btn-text:     #0a0a0a;
+      --error:        #f06060;
+      --error-dim:    rgba(240,96,96,0.12);
+      --shadow-card:  none;
+      --shadow-hover: 0 18px 44px rgba(0,0,0,0.5);
+      --header-bg:    rgba(10,10,10,0.85);
+      --grain-blend:  overlay;
+      --grain-opacity:0.032;
+    }
+
+    /* ═══════════════ BASE ═══════════════ */
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 220ms var(--ease), color 220ms var(--ease);
+    }
+
+    h1, h2, h3, p, li, label, span { overflow-wrap: break-word; word-break: break-word; }
+
+    /* Grain overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: var(--grain-opacity);
+      mix-blend-mode: var(--grain-blend);
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: fixed;
+      top: -100%;
+      left: 24px;
+      z-index: 10000;
+      background: var(--accent-fill);
+      color: var(--btn-text);
+      font-family: var(--font);
+      font-size: 0.875rem;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: var(--r-sm);
+      text-decoration: none;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 16px; }
+
+    /* Focus */
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+    :focus:not(:focus-visible) { outline: none; }
+
+    button, a, [role="button"] { touch-action: manipulation; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--s3); border-radius: 3px; }
+
+    /* ═══════════════ HEADER ═══════════════ */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: var(--header-bg);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      transition: border-color 300ms var(--ease), background-color 220ms var(--ease);
+    }
+    header.scrolled { border-bottom-color: var(--border-hi); }
+
+    nav {
+      max-width: var(--max);
+      margin: 0 auto;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.025em;
+      transition: color 220ms var(--ease);
+    }
+    .logo em { font-style: normal; color: var(--accent); }
+
+    .nav-right { display: flex; align-items: center; gap: 10px; }
+
+    /* Theme toggle */
+    .theme-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--s2);
+      color: var(--text-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 180ms var(--ease), border-color 180ms var(--ease),
+                  transform 300ms var(--ease), color 220ms var(--ease);
+      flex-shrink: 0;
+    }
+    .theme-btn:hover {
+      background: var(--s1);
+      border-color: var(--border-hi);
+      transform: rotate(22deg);
+    }
+    /* Show moon in light mode (to switch TO dark), sun in dark mode (to switch TO light) */
+    .theme-btn .icon-sun  { display: none; }
+    .theme-btn .icon-moon { display: block; }
+    [data-theme="dark"] .theme-btn .icon-sun  { display: block; }
+    [data-theme="dark"] .theme-btn .icon-moon { display: none; }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--accent-fill);
+      color: var(--btn-text);
+      font-family: var(--font);
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 10px 18px;
+      min-height: 44px;
+      border-radius: var(--r-sm);
+      text-decoration: none;
+      transition: background 180ms var(--ease), transform 180ms var(--ease), box-shadow 180ms var(--ease);
+    }
+    .nav-cta:hover {
+      background: var(--accent-h);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px var(--accent-ring);
+    }
+    .nav-cta:active { transform: translateY(0); }
+
+    /* ═══════════════ HERO ═══════════════ */
+    #hero {
+      padding: 88px 24px 100px;
+      position: relative;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(860px, 100%);
+      height: 520px;
+      background: radial-gradient(ellipse at 50% 40%, rgba(0,184,93,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 56px;
+    }
+    @media (min-width: 920px) {
+      .hero-inner { grid-template-columns: 1fr 440px; gap: 72px; align-items: start; }
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow::before { content: ''; width: 22px; height: 2px; background: var(--accent); display: block; flex-shrink: 0; }
+
+    h1 {
+      font-size: clamp(2.4rem, 5.6vw, 4.4rem);
+      font-weight: 700;
+      line-height: 1.06;
+      letter-spacing: -0.035em;
+      margin-bottom: 22px;
+    }
+    h1 em { font-style: normal; color: var(--accent); }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--text-2);
+      font-weight: 400;
+      max-width: 520px;
+      line-height: 1.75;
+      margin-bottom: 40px;
+    }
+
+    .trust-badges { display: flex; flex-wrap: wrap; gap: 10px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--accent-dim);
+      border: 1px solid rgba(0,110,56,0.18);
+      padding: 8px 14px;
+      border-radius: 100px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    [data-theme="dark"] .badge { border-color: rgba(0,210,106,0.2); }
+    .badge svg { flex-shrink: 0; }
+
+    /* ═══════════════ FORM ═══════════════ */
+    .form-card {
+      background: var(--s2);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 28px;
+      box-shadow: var(--shadow-card);
+      transition: background-color 220ms var(--ease), border-color 220ms var(--ease),
+                  box-shadow 220ms var(--ease);
+    }
+    .form-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-bottom: 22px;
+      color: var(--text);
+    }
+
+    .form-group { margin-bottom: 14px; }
+
+    label {
+      display: block;
+      font-size: 0.73rem;
+      font-weight: 600;
+      color: var(--text-2);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 7px;
+    }
+    .req-mark { color: var(--accent); margin-left: 2px; }
+
+    input, textarea {
+      width: 100%;
+      background: var(--s1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      padding: 12px 14px;
+      min-height: 44px;
+      font-family: var(--font);
+      font-size: 0.92rem;
+      color: var(--text);
+      outline: none;
+      transition: border-color 180ms var(--ease), box-shadow 180ms var(--ease),
+                  background-color 220ms var(--ease);
+    }
+    input::placeholder, textarea::placeholder { color: var(--text-3); }
+    input:focus, textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-dim);
+      background: var(--s2);
+    }
+    input.error, textarea.error {
+      border-color: var(--error);
+      box-shadow: 0 0 0 3px var(--error-dim);
+    }
+    textarea { resize: vertical; min-height: 90px; }
+
+    .field-error {
+      font-size: 0.78rem;
+      color: var(--error);
+      font-weight: 500;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .btn-primary {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--accent-fill);
+      color: var(--btn-text);
+      font-family: var(--font);
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 13px 22px;
+      min-height: 44px;
+      border-radius: var(--r-sm);
+      border: none;
+      cursor: pointer;
+      margin-top: 18px;
+      letter-spacing: -0.01em;
+      transition: background 180ms var(--ease), transform 180ms var(--ease), box-shadow 180ms var(--ease);
+    }
+    .btn-primary:hover {
+      background: var(--accent-h);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px var(--accent-ring);
+    }
+    .btn-primary:active { transform: translateY(1px); box-shadow: none; }
+    .btn-primary:disabled { opacity: 0.65; cursor: not-allowed; transform: none; box-shadow: none; }
+
+    .spinner {
+      width: 15px; height: 15px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: var(--btn-text);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      flex-shrink: 0;
+    }
+    [data-theme="dark"] .spinner { border-color: rgba(10,10,10,0.25); border-top-color: #0a0a0a; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .form-or {
+      display: flex; align-items: center; gap: 12px;
+      margin: 14px 0; color: var(--text-3); font-size: 0.78rem;
+    }
+    .form-or::before, .form-or::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    .btn-whatsapp {
+      width: 100%;
+      display: flex; align-items: center; justify-content: center; gap: 9px;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--font); font-size: 0.9rem; font-weight: 600;
+      padding: 12px 22px; min-height: 44px;
+      border-radius: var(--r-sm); text-decoration: none; cursor: pointer;
+      transition: border-color 180ms var(--ease), background 180ms var(--ease), transform 180ms var(--ease);
+    }
+    .btn-whatsapp:hover {
+      border-color: #25d366;
+      background: rgba(37,211,102,0.06);
+      transform: translateY(-1px);
+    }
+    .btn-whatsapp:active { transform: translateY(0); }
+    .wa-icon { color: #25d366; flex-shrink: 0; }
+
+    .form-success {
+      display: none; flex-direction: column; align-items: center; text-align: center; gap: 18px;
+      background: var(--accent-dim);
+      border: 1px solid rgba(0,110,56,0.22);
+      border-radius: var(--r-sm);
+      padding: 36px 24px;
+    }
+    [data-theme="dark"] .form-success { border-color: rgba(0,210,106,0.25); }
+    .form-success.show { display: flex; animation: slide-in 0.32s var(--ease); }
+    @keyframes slide-in { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
+
+    .form-success-body { display: flex; flex-direction: column; gap: 6px; }
+    .form-success-body strong { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+    .form-success-body span { font-size: 0.875rem; color: var(--text-2); line-height: 1.65; }
+    .form-success-reset {
+      background: none; border: none; color: var(--accent);
+      font-family: var(--font); font-size: 0.82rem; font-weight: 600;
+      cursor: pointer; margin-top: 6px; padding: 4px 0;
+      text-decoration: underline; text-decoration-color: transparent;
+      transition: text-decoration-color 150ms var(--ease);
+    }
+    .form-success-reset:hover { text-decoration-color: currentColor; }
+    form.form-submitted > :not(.form-success) { display: none !important; }
+
+    .check-svg { width: 48px; height: 48px; flex-shrink: 0; stroke: var(--accent); stroke-width: 2.2; fill: none; }
+    .check-circle { stroke-dasharray: 66; stroke-dashoffset: 66; animation: draw 0.5s cubic-bezier(0.65,0,0.45,1) forwards; }
+    .check-path   { stroke-dasharray: 20; stroke-dashoffset: 20; animation: draw 0.25s cubic-bezier(0.65,0,0.45,1) 0.4s forwards; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+
+    /* ═══════════════ SECTIONS ═══════════════ */
+    section { padding: 96px 24px; }
+    .s-inner { max-width: var(--max); margin: 0 auto; }
+
+    .s-tag {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-size: 0.7rem; font-weight: 600; color: var(--accent);
+      letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px;
+    }
+    .s-tag::before { content: ''; width: 16px; height: 2px; background: var(--accent); display: block; flex-shrink: 0; }
+
+    h2 {
+      font-size: clamp(1.9rem, 3.8vw, 2.9rem);
+      font-weight: 700; letter-spacing: -0.03em;
+      line-height: 1.12; margin-bottom: 14px;
+    }
+    .s-sub { font-size: 1.02rem; color: var(--text-2); margin-bottom: 56px; max-width: 460px; line-height: 1.75; }
+
+    /* ═══════════════ VORTEILE ═══════════════ */
+    #vorteile {
+      background: var(--s1);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      transition: background-color 220ms var(--ease);
+    }
+
+    .feat-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: var(--r); overflow: hidden;
+    }
+    @media (min-width: 560px) { .feat-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .feat-grid { grid-template-columns: repeat(4,1fr); } }
+
+    .feat-item {
+      background: var(--s2); padding: 36px 28px; min-width: 0;
+      transition: background 200ms var(--ease);
+    }
+    .feat-item:hover { background: var(--s1); }
+
+    .feat-icon {
+      width: 42px; height: 42px;
+      background: var(--accent-dim); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px; color: var(--accent); flex-shrink: 0;
+      transition: transform 240ms var(--ease), box-shadow 240ms var(--ease);
+    }
+    .feat-item:hover .feat-icon { transform: scale(1.12) rotate(-4deg); box-shadow: 0 4px 18px var(--accent-ring); }
+    .feat-item h3 { font-size: 1.05rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 9px; }
+    .feat-item p  { font-size: 0.875rem; color: var(--text-2); line-height: 1.7; }
+
+    /* ═══════════════ VIDEOS ═══════════════ */
+    #videos {
+      background: var(--s1);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      transition: background-color 220ms var(--ease);
+    }
+
+    .videos-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .videos-header-text { margin-bottom: 0; }
+    .videos-header-text .s-sub { margin-bottom: 0; }
+
+    .btn-channel {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 10px 16px;
+      min-height: 44px;
+      border-radius: var(--r-sm);
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: border-color 180ms var(--ease), background 180ms var(--ease), transform 180ms var(--ease);
+    }
+    .btn-channel:hover {
+      border-color: var(--border-hi);
+      background: var(--s2);
+      transform: translateY(-1px);
+    }
+    .yt-icon { color: #ff0000; flex-shrink: 0; }
+
+    .video-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media (min-width: 680px) { .video-grid { grid-template-columns: 1fr 1fr; } }
+
+    .video-wrap {
+      position: relative; padding-bottom: 56.25%; height: 0;
+      border-radius: var(--r); overflow: hidden; background: var(--s3);
+    }
+    .video-ph {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+      background: #111 center/cover no-repeat; border-radius: var(--r);
+      cursor: pointer; overflow: hidden;
+      transition: transform 200ms var(--ease);
+    }
+    .video-ph::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.1) 100%);
+      transition: opacity 200ms var(--ease);
+    }
+    .video-ph:hover::before { opacity: 0.85; }
+    .video-ph:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+    .video-ph > * { position: relative; z-index: 1; }
+    .play-btn-wrap { position: relative; display: flex; align-items: center; justify-content: center; }
+    .play-pulse {
+      position: absolute; width: 60px; height: 60px; border-radius: 50%;
+      background: var(--accent-fill); opacity: 0;
+      animation: pulse-ring 2.5s ease-out infinite;
+    }
+    .play-pulse:nth-child(2) { animation-delay: 1.25s; }
+    @keyframes pulse-ring {
+      0%   { transform: scale(1); opacity: 0.3; }
+      80%  { transform: scale(1.7); opacity: 0; }
+      100% { transform: scale(1.7); opacity: 0; }
+    }
+    .play-btn {
+      position: relative; width: 60px; height: 60px; border-radius: 50%;
+      background: var(--accent-fill); display: flex; align-items: center;
+      justify-content: center; color: var(--btn-text); z-index: 1;
+      transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+    }
+    .video-ph:hover .play-btn { transform: scale(1.1); box-shadow: 0 0 36px rgba(0,0,0,0.5); }
+    .video-label { font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.9); text-shadow: 0 1px 4px rgba(0,0,0,0.6); }
+
+    /* ═══════════════ CONTACT ═══════════════ */
+    .contact-center { max-width: 600px; margin: 0 auto; text-align: center; }
+    .contact-center .s-tag { justify-content: center; }
+    .contact-center h2 { text-align: center; }
+    .contact-center .s-sub { margin-left: auto; margin-right: auto; text-align: center; }
+    #contact .form-card { text-align: left; }
+
+    /* ═══════════════ FOOTER ═══════════════ */
+    footer {
+      background: var(--s1); border-top: 1px solid var(--border);
+      transition: background-color 220ms var(--ease);
+    }
+    .footer-top {
+      max-width: var(--max); margin: 0 auto; padding: 48px 24px 40px;
+      display: grid; grid-template-columns: 1fr; gap: 36px;
+    }
+    @media (min-width: 680px) {
+      .footer-top { grid-template-columns: 1fr auto auto; align-items: start; gap: 48px; }
+    }
+    .footer-brand .logo { display: block; margin-bottom: 8px; }
+    .footer-brand p { font-size: 0.82rem; color: var(--text-2); }
+
+    .footer-contact { display: flex; flex-direction: column; gap: 6px; }
+    .footer-contact a {
+      display: flex; align-items: center; gap: 8px;
+      color: var(--text-2); font-size: 0.85rem; text-decoration: none; min-height: 44px;
+      transition: color 180ms var(--ease);
+    }
+    .footer-contact a:hover { color: var(--text); }
+
+    .footer-nav { display: flex; flex-direction: column; gap: 4px; }
+    .footer-nav a {
+      font-size: 0.85rem; color: var(--text-2); text-decoration: none;
+      min-height: 44px; display: flex; align-items: center;
+      transition: color 180ms var(--ease);
+    }
+    .footer-nav a:hover { color: var(--text); }
+
+    .footer-bottom { border-top: 1px solid var(--border); padding: 20px 24px; text-align: center; }
+    .footer-bottom p { font-size: 0.78rem; color: var(--text-3); }
+
+    /* ═══════════════ COOKIE BANNER ═══════════════ */
+    .cookie-banner {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 9000;
+      background: var(--s2); border-top: 1px solid var(--border);
+      box-shadow: 0 -4px 32px rgba(0,0,0,0.10);
+      padding: 14px 24px;
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      justify-content: space-between;
+      transition: transform 320ms var(--ease);
+    }
+    .cookie-banner.hidden { transform: translateY(110%); pointer-events: none; }
+    .cookie-banner p { font-size: 0.83rem; color: var(--text-2); max-width: 640px; line-height: 1.55; }
+    .cookie-banner p .link-btn {
+      color: var(--accent); text-decoration: underline; background: none; border: none;
+      cursor: pointer; font: inherit; padding: 0;
+    }
+    .cookie-actions { display: flex; gap: 8px; flex-shrink: 0; }
+    .cookie-btn-accept {
+      background: var(--accent-fill); color: var(--btn-text);
+      border: none; border-radius: var(--r-sm); padding: 9px 18px;
+      font: 600 0.83rem var(--font); cursor: pointer; min-height: 40px;
+      transition: background 150ms var(--ease);
+    }
+    .cookie-btn-accept:hover { background: var(--accent-h); }
+    .cookie-btn-decline {
+      background: none; color: var(--text-2); border: 1px solid var(--border);
+      border-radius: var(--r-sm); padding: 9px 18px;
+      font: 500 0.83rem var(--font); cursor: pointer; min-height: 40px;
+      transition: border-color 150ms var(--ease), color 150ms var(--ease);
+    }
+    .cookie-btn-decline:hover { border-color: var(--border-hi); color: var(--text); }
+
+    /* ═══════════════ MODALS ═══════════════ */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 8500;
+      background: rgba(0,0,0,0.52); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+      align-items: flex-start; justify-content: center;
+      padding: 32px 16px 40px; overflow-y: auto;
+    }
+    .modal-overlay.open { display: flex; animation: modal-fade 200ms var(--ease); }
+    @keyframes modal-fade { from { opacity: 0; } to { opacity: 1; } }
+    .modal-box {
+      background: var(--s2); border: 1px solid var(--border); border-radius: var(--r);
+      max-width: 700px; width: 100%; margin: auto; position: relative;
+      animation: modal-up 260ms var(--ease);
+    }
+    @keyframes modal-up { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+    .modal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 22px 28px 18px; border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; background: var(--s2); z-index: 1; border-radius: var(--r) var(--r) 0 0;
+    }
+    .modal-header h2 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.025em; }
+    .modal-close-btn {
+      width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+      background: var(--s1); border: 1px solid var(--border); border-radius: 50%;
+      cursor: pointer; color: var(--text-2); font: 500 1rem var(--font); flex-shrink: 0;
+      transition: background 150ms var(--ease), color 150ms var(--ease);
+    }
+    .modal-close-btn:hover { background: var(--s3); color: var(--text); }
+    .modal-body { padding: 24px 28px 32px; }
+    .modal-body h3 { font-size: 0.95rem; font-weight: 700; margin: 22px 0 8px; color: var(--text); }
+    .modal-body h3:first-child { margin-top: 0; }
+    .modal-body h4 { font-size: 0.88rem; font-weight: 600; color: var(--text); margin: 14px 0 5px; }
+    .modal-body p { font-size: 0.875rem; color: var(--text-2); line-height: 1.75; margin-bottom: 6px; }
+    .modal-body address { font-style: normal; font-size: 0.875rem; color: var(--text-2); line-height: 1.85; }
+    .modal-body a { color: var(--accent); }
+    .modal-body ul { padding-left: 20px; margin-top: 4px; }
+    .modal-body ul li { font-size: 0.875rem; color: var(--text-2); line-height: 1.75; margin-bottom: 3px; }
+    .modal-placeholder {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--error-dim); border: 1px solid var(--error);
+      border-radius: var(--r-sm); padding: 5px 10px;
+      font-size: 0.78rem; font-weight: 600; color: var(--error);
+    }
+
+    /* footer nav buttons (replace <a href="#"> links) */
+    .footer-nav-btn {
+      font-size: 0.85rem; color: var(--text-2); background: none; border: none;
+      cursor: pointer; font-family: var(--font); padding: 0;
+      min-height: 44px; display: flex; align-items: center;
+      transition: color 180ms var(--ease);
+    }
+    .footer-nav-btn:hover { color: var(--text); }
+
+    /* ═══════════════ REDUCED MOTION ═══════════════ */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto; }
+      .check-circle, .check-path { stroke-dashoffset: 0; animation: none; }
+      [data-aos] { opacity: 1 !important; transform: none !important; }
+    }
+
+    /* ═══════════════ RESPONSIVE — MOBILE ═══════════════ */
+    @media (max-width: 639px) {
+      section         { padding: 60px 20px; }
+      #hero           { padding: 52px 20px 64px; }
+      .hero-inner     { gap: 32px; }
+      .s-sub          { margin-bottom: 36px; }
+
+      .form-card      { padding: 20px; }
+      .form-card h3   { margin-bottom: 16px; }
+      .form-group     { margin-bottom: 12px; }
+
+      .feat-item      { padding: 26px 20px; }
+
+      .videos-header  { margin-bottom: 28px; }
+      .video-grid     { gap: 14px; }
+
+      .footer-top     { padding: 36px 20px 28px; gap: 24px; }
+
+      /* Cookie banner: stack tightly on narrow screens */
+      .cookie-banner  { padding: 12px 16px; gap: 8px; }
+      .cookie-actions { width: 100%; justify-content: flex-end; }
+
+      /* Modals: reduce side padding */
+      .modal-overlay  { padding: 20px 12px 28px; }
+      .modal-header   { padding: 16px 20px 14px; }
+      .modal-body     { padding: 18px 20px 24px; }
+    }
+
+    /* Mobile: hide nav CTA — form is visible in hero */
+    @media (max-width: 639px) {
+      .nav-cta        { display: none; }
+    }
+
+    /* ═══════════════ ARRANGE — LAYOUT & RHYTHM ═══════════════ */
+
+    /* Feat-grid: editorial numbered layout — remove generic white cards */
+    .feat-grid {
+      counter-reset: feat-n;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      gap: 0;
+      border-top: 1px solid var(--border-hi);
+      border-left: 1px solid var(--border-hi);
+    }
+    .feat-item {
+      counter-increment: feat-n;
+      background: transparent;
+      border-right: 1px solid var(--border-hi);
+      border-bottom: 1px solid var(--border-hi);
+      padding: 40px 28px;
+    }
+    .feat-item:hover { background: var(--s2); }
+    /* Suppress old icon-based hover */
+    .feat-item:hover .feat-icon { transform: none; box-shadow: none; }
+
+    /* Numbered labels replace icon boxes */
+    .feat-item::before {
+      content: counter(feat-n, decimal-leading-zero);
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.16em;
+      font-family: var(--font);
+      margin-bottom: 22px;
+    }
+    .feat-icon { display: none; }
+
+    /* Vorteile heading: split layout on desktop — heading left, sub right */
+    @media (min-width: 920px) {
+      #vorteile .s-inner > [data-aos] {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        column-gap: 96px;
+        margin-bottom: 48px;
+      }
+      #vorteile .s-inner > [data-aos] .s-tag { grid-column: 1; grid-row: 1; }
+      #vorteile .s-inner > [data-aos] h2     { grid-column: 1; grid-row: 2; margin-bottom: 0; }
+      #vorteile .s-inner > [data-aos] .s-sub {
+        grid-column: 2;
+        grid-row: 1 / 3;
+        align-self: end;
+        margin-bottom: 0;
+        max-width: none;
+      }
+    }
+
+    /* Contact: stronger CTA weight via generous padding */
+    #contact { padding-top: 112px; padding-bottom: 112px; }
+    @media (max-width: 639px) { #contact { padding-top: 72px; padding-bottom: 72px; } }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <header id="site-header">
+    <nav aria-label="Hauptnavigation">
+      <a href="#" class="logo" aria-label="renekauftdeinauto – Startseite">rene<em>kauft</em>deinauto</a>
+      <div class="nav-right">
+        <button id="theme-toggle" class="theme-btn" aria-label="Dunkles Design aktivieren" type="button">
+          <!-- Moon: shown in light mode -->
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <!-- Sun: shown in dark mode -->
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+        <a href="#anfrage" class="nav-cta">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.95a16 16 0 0 0 6 6l.95-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 16.92z"/>
+          </svg>
+          Jetzt anfragen
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ══════════ HERO ══════════ -->
+    <section id="hero" aria-labelledby="hero-heading">
+      <div class="hero-inner">
+
+        <div class="hero-content" data-aos="fade-up">
+          <div class="hero-eyebrow" aria-hidden="true">Schnell · Fair · Persönlich</div>
+          <h1 id="hero-heading">Dein Auto schnell &amp; <em>sicher</em> verkaufen</h1>
+          <p class="hero-sub">Ich kaufe dein Auto – unkompliziert, fair und innerhalb von 24 Stunden. Kein Stress, kein Aufwand.</p>
+          <div class="trust-badges" aria-label="Unsere Leistungen">
+            <div class="badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Sofortige Bewertung
+            </div>
+            <div class="badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              Abholung vor Ort
+            </div>
+            <div class="badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              Direkte Bezahlung
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card" id="anfrage" data-aos="fade-up" data-aos-delay="80">
+          <h3>Kostenlos &amp; unverbindlich anfragen</h3>
+          <form onsubmit="handleSubmit(event,'heroOk')" novalidate>
+            <div class="form-group">
+              <label for="h-name">Name<span class="req-mark" aria-hidden="true">*</span></label>
+              <input type="text" id="h-name" name="name" placeholder="Max Mustermann"
+                     required aria-required="true" autocomplete="name" maxlength="100">
+            </div>
+            <div class="form-group">
+              <label for="h-phone">Telefonnummer<span class="req-mark" aria-hidden="true">*</span></label>
+              <input type="tel" id="h-phone" name="phone" placeholder="+49 123 456789"
+                     required aria-required="true" autocomplete="tel" maxlength="30">
+            </div>
+            <div class="form-group">
+              <label for="h-car">Fahrzeug<span class="req-mark" aria-hidden="true">*</span></label>
+              <input type="text" id="h-car" name="car" placeholder="z.B. BMW 3er, 2019, 80.000 km"
+                     required aria-required="true" autocomplete="off" maxlength="200">
+            </div>
+            <div class="form-group">
+              <label for="h-msg">Was möchtest du verkaufen?</label>
+              <textarea id="h-msg" name="message"
+                        placeholder="Erzähl mir mehr – Zustand, Kilometerstand, Extras …"
+                        maxlength="1000"></textarea>
+            </div>
+            <button type="submit" class="btn-primary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Jetzt kostenlos anfragen
+            </button>
+            <div class="form-or" aria-hidden="true">oder</div>
+            <a href="https://wa.me/4901717778519" target="_blank" rel="noopener noreferrer"
+               class="btn-whatsapp" aria-label="Auto direkt per WhatsApp verkaufen">
+              <svg class="wa-icon" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+              </svg>
+              Direkt per WhatsApp verkaufen
+            </a>
+            <div id="heroOk" class="form-success" role="alert" aria-live="assertive">
+              <svg class="check-svg" viewBox="0 0 28 28" aria-hidden="true">
+                <circle class="check-circle" cx="14" cy="14" r="12" stroke-linecap="round"/>
+                <path class="check-path" d="M8 14l4 4 8-8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="form-success-body">
+                <strong>Anfrage erhalten!</strong>
+                <span>Vielen Dank – ich melde mich so schnell wie möglich, meist innerhalb weniger Stunden.</span>
+                <button type="button" class="form-success-reset" onclick="resetForm(this)">Neue Anfrage stellen</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════ VORTEILE ══════════ -->
+    <section id="vorteile" aria-labelledby="vorteile-heading">
+      <div class="s-inner">
+        <div data-aos="fade-up">
+          <div class="s-tag" aria-hidden="true">Warum Rene?</div>
+          <h2 id="vorteile-heading">Einfacher geht's nicht</h2>
+          <p class="s-sub">Kein Kleinanzeigen-Stress, keine Besichtigungstouren. Ich übernehme alles.</p>
+        </div>
+        <div class="feat-grid" role="list">
+          <div class="feat-item" role="listitem" data-aos="fade-up" data-aos-delay="0">
+            <div class="feat-icon" aria-hidden="true">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3>Schnelle Abwicklung</h3>
+            <p>Bewertung, Abholung und Zahlung innerhalb von 24 Stunden. Kein langes Warten, keine Bürokratie.</p>
+          </div>
+          <div class="feat-item" role="listitem" data-aos="fade-up" data-aos-delay="70">
+            <div class="feat-icon" aria-hidden="true">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Faire Preise</h3>
+            <p>Ich zahle marktgerechte Preise – transparent und ohne versteckte Abzüge. Du kennst den Betrag vorab.</p>
+          </div>
+          <div class="feat-item" role="listitem" data-aos="fade-up" data-aos-delay="140">
+            <div class="feat-icon" aria-hidden="true">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3>Persönlicher Kontakt</h3>
+            <p>Du sprichst direkt mit mir, Rene – kein Callcenter, keine Warteschleife, kein Formular-Ping-Pong.</p>
+          </div>
+          <div class="feat-item" role="listitem" data-aos="fade-up" data-aos-delay="210">
+            <div class="feat-icon" aria-hidden="true">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>Deutschlandweite Abholung</h3>
+            <p>Von Hamburg bis München – ich komme zu dir. Egal ob Stadt oder Land, ich hole dein Auto ab.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ YOUTUBE ══════════ -->
+<section id="videos" aria-labelledby="videos-heading">
+      <div class="s-inner">
+        <div class="videos-header" data-aos="fade-up">
+          <div class="videos-header-text">
+            <div class="s-tag" aria-hidden="true">Mein YouTube-Kanal</div>
+            <h2 id="videos-heading">Schau mir bei der Arbeit zu</h2>
+            <p class="s-sub">Transparenz ist mir wichtig. Sieh selbst, wie ein Ankauf mit mir abläuft.</p>
+          </div>
+          <a href="https://www.youtube.com/@Rene.Almasi" target="_blank" rel="noopener noreferrer"
+             class="btn-channel" aria-label="YouTube-Kanal von Rene Almasi öffnen">
+            <svg class="yt-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+            Zum Kanal
+          </a>
+        </div>
+        <div class="video-grid">
+          <div data-aos="fade-up" data-aos-delay="0">
+            <div class="video-wrap">
+              <a class="video-ph" href="https://www.youtube.com/watch?v=EvXTV2qx1tk" target="_blank" rel="noopener noreferrer"
+                   aria-label="Video auf YouTube ansehen: So läuft ein Autoankauf ab"
+                   data-vid="EvXTV2qx1tk">
+                <div class="play-btn-wrap">
+                  <div class="play-pulse" aria-hidden="true"></div>
+                  <div class="play-pulse" aria-hidden="true"></div>
+                  <div class="play-btn" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  </div>
+                </div>
+                <span class="video-label">So läuft ein Autoankauf ab</span>
+              </a>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="90">
+            <div class="video-wrap">
+              <a class="video-ph" href="https://www.youtube.com/watch?v=TNhzN1g9MEg" target="_blank" rel="noopener noreferrer"
+                   aria-label="Video auf YouTube ansehen: Fahrzeugbewertung live dabei"
+                   data-vid="TNhzN1g9MEg">
+                <div class="play-btn-wrap">
+                  <div class="play-pulse" aria-hidden="true"></div>
+                  <div class="play-pulse" aria-hidden="true"></div>
+                  <div class="play-btn" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  </div>
+                </div>
+                <span class="video-label">Fahrzeugbewertung live dabei</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CTA REPEAT ══════════ -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="s-inner">
+        <div class="contact-center">
+          <div data-aos="fade-up">
+            <div class="s-tag" aria-hidden="true">Kostenlos &amp; unverbindlich</div>
+            <h2 id="contact-heading">Jetzt Auto verkaufen</h2>
+            <p class="s-sub">Füll das Formular aus – ich melde mich innerhalb weniger Stunden zurück.</p>
+          </div>
+          <div class="form-card" data-aos="fade-up" data-aos-delay="80">
+            <form onsubmit="handleSubmit(event,'contactOk')" novalidate>
+              <div class="form-group">
+                <label for="c-name">Name<span class="req-mark" aria-hidden="true">*</span></label>
+                <input type="text" id="c-name" name="name" placeholder="Max Mustermann"
+                       required aria-required="true" autocomplete="name" maxlength="100">
+              </div>
+              <div class="form-group">
+                <label for="c-phone">Telefonnummer<span class="req-mark" aria-hidden="true">*</span></label>
+                <input type="tel" id="c-phone" name="phone" placeholder="+49 123 456789"
+                       required aria-required="true" autocomplete="tel" maxlength="30">
+              </div>
+              <div class="form-group">
+                <label for="c-car">Fahrzeug<span class="req-mark" aria-hidden="true">*</span></label>
+                <input type="text" id="c-car" name="car" placeholder="z.B. Mercedes C-Klasse, 2020, 60.000 km"
+                       required aria-required="true" autocomplete="off" maxlength="200">
+              </div>
+              <div class="form-group">
+                <label for="c-msg">Was möchtest du verkaufen?</label>
+                <textarea id="c-msg" name="message"
+                          placeholder="Erzähl mir mehr – Zustand, Kilometerstand, Extras …"
+                          maxlength="1000"></textarea>
+              </div>
+              <button type="submit" class="btn-primary">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Jetzt kostenlos anfragen
+              </button>
+              <div class="form-or" aria-hidden="true">oder</div>
+              <a href="https://wa.me/4901717778519" target="_blank" rel="noopener noreferrer"
+                 class="btn-whatsapp" aria-label="Auto direkt per WhatsApp verkaufen">
+                <svg class="wa-icon" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+                </svg>
+                Direkt per WhatsApp verkaufen
+              </a>
+              <div id="contactOk" class="form-success" role="alert" aria-live="assertive">
+                <svg class="check-svg" viewBox="0 0 28 28" aria-hidden="true">
+                  <circle class="check-circle" cx="14" cy="14" r="12" stroke-linecap="round"/>
+                  <path class="check-path" d="M8 14l4 4 8-8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="form-success-body">
+                  <strong>Anfrage erhalten!</strong>
+                  <span>Vielen Dank – ich melde mich so schnell wie möglich, meist innerhalb weniger Stunden.</span>
+                  <button type="button" class="form-success-reset" onclick="resetForm(this)">Neue Anfrage stellen</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo" aria-label="renekauftdeinauto – Startseite">rene<em>kauft</em>deinauto</a>
+        <p>Schnell. Fair. Persönlich.</p>
+      </div>
+      <div class="footer-contact" aria-label="Kontakt">
+        <a href="tel:+4901717778519" aria-label="Anrufen: 0171 7778519">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.95a16 16 0 0 0 6 6l.95-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 16.92z"/></svg>
+          0171 7778519
+        </a>
+        <a href="https://wa.me/4901717778519" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp schreiben">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#25d366" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+          </svg>
+          WhatsApp schreiben
+        </a>
+        <a href="https://www.youtube.com/@Rene.Almasi" target="_blank" rel="noopener noreferrer" aria-label="YouTube-Kanal öffnen">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#ff0000" aria-hidden="true">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          YouTube
+        </a>
+      </div>
+      <nav class="footer-nav" aria-label="Rechtliches">
+        <button class="footer-nav-btn" onclick="openModal('impressum-modal')">Impressum</button>
+        <button class="footer-nav-btn" onclick="openModal('datenschutz-modal')">Datenschutz</button>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year">2025</span> renekauftdeinauto.de – Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <!-- ══════════ COOKIE BANNER ══════════ -->
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Datenschutzhinweis">
+    <p>Diese Website nutzt externe Dienste (Google Fonts, YouTube), die erst nach deiner Zustimmung geladen werden. Mehr Informationen in der <button class="link-btn" onclick="openModal('datenschutz-modal')">Datenschutzerklärung</button>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-btn-decline" onclick="setConsent('declined')">Nur Notwendige</button>
+      <button class="cookie-btn-accept" onclick="setConsent('accepted')">Akzeptieren</button>
+    </div>
+  </div>
+
+  <!-- ══════════ IMPRESSUM MODAL ══════════ -->
+  <div id="impressum-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="impressum-title">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 id="impressum-title">Impressum</h2>
+        <button class="modal-close-btn" onclick="closeModal('impressum-modal')" aria-label="Impressum schließen">&#x2715;</button>
+      </div>
+      <div class="modal-body">
+        <h3>Angaben gemäß § 5 TMG</h3>
+        <address>
+          Rene Almasi<br>
+          Langäckerstraße 23<br>
+          78554 Aldingen<br><br>
+          Telefon: <a href="tel:+4901717778519">0171 7778519</a><br>
+          E-Mail: <a href="mailto:info@renekauftdeinauto.de">info@renekauftdeinauto.de</a>
+        </address>
+
+        <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+        <address>
+          Rene Almasi<br>
+          Langäckerstraße 23<br>
+          78554 Aldingen
+        </address>
+
+        <h3>Haftungsausschluss</h3>
+        <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann keine Gewähr übernommen werden.</p>
+
+        <h3>Haftung für Links</h3>
+        <p>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte kein Einfluss besteht. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft.</p>
+
+        <h3>Urheberrecht</h3>
+        <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ DATENSCHUTZ MODAL ══════════ -->
+  <div id="datenschutz-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="datenschutz-title">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 id="datenschutz-title">Datenschutzerklärung</h2>
+        <button class="modal-close-btn" onclick="closeModal('datenschutz-modal')" aria-label="Datenschutzerklärung schließen">&#x2715;</button>
+      </div>
+      <div class="modal-body">
+        <h3>1. Verantwortlicher</h3>
+        <address>
+          Rene Almasi<br>
+          Langäckerstraße 23<br>
+          78554 Aldingen<br><br>
+          Telefon: 0171 7778519<br>
+          E-Mail: <a href="mailto:info@renekauftdeinauto.de">info@renekauftdeinauto.de</a>
+        </address>
+
+        <h3>2. Kontaktformular</h3>
+        <p>Wenn du das Kontaktformular nutzt, werden deine Angaben (Name, Telefonnummer, Fahrzeugdaten sowie eine optionale Nachricht) ausschließlich zum Zweck der Kontaktaufnahme und zur Unterbreitung eines Kaufangebots für dein Fahrzeug verarbeitet.</p>
+        <p>Die Daten werden nicht an unbeteiligte Dritte weitergegeben, nicht für andere Zwecke verwendet und nicht über die Bearbeitung deiner Anfrage hinaus gespeichert.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung)</p>
+
+        <h3>3. Externe Dienste</h3>
+        <h4>Google Fonts</h4>
+        <p>Diese Website verwendet Google Fonts (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) zur Darstellung von Schriftarten. Die Schriftarten werden nur nach deiner Einwilligung geladen. Bei der Nutzung wird deine IP-Adresse an Server von Google übermittelt.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) &nbsp;|&nbsp; <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Datenschutzrichtlinie</a></p>
+
+        <h4>YouTube</h4>
+        <p>Diese Website bettet Videos von YouTube (Google Ireland Limited) ein. Vorschaubilder (Thumbnails) der Videos werden nach deiner Einwilligung von YouTube's CDN (i.ytimg.com) geladen. Das eigentliche Video wird erst abgespielt, wenn du aktiv auf den Vorschaubereich klickst und damit zu YouTube weitergeleitet wirst.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch aktiven Klick) &nbsp;|&nbsp; <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Datenschutzrichtlinie</a></p>
+
+        <h4>JavaScript-Bibliotheken (CDN)</h4>
+        <p>Zum Laden von Animationsbibliotheken wird der CDN-Dienst unpkg.com (Fastly, Inc.) genutzt. Dabei wird deine IP-Adresse technisch übermittelt. Eine persönliche Identifizierung oder Auswertung findet nicht statt.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Funktionsfähigkeit der Website)</p>
+
+        <h3>4. Deine Rechte</h3>
+        <p>Dir stehen folgende Rechte hinsichtlich deiner personenbezogenen Daten zu:</p>
+        <ul>
+          <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+          <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+          <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+          <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+          <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+          <li>Widerspruchsrecht (Art. 21 DSGVO)</li>
+          <li>Recht auf Widerruf einer erteilten Einwilligung (Art. 7 Abs. 3 DSGVO)</li>
+        </ul>
+        <p>Zur Ausübung deiner Rechte wende dich an: <a href="mailto:info@renekauftdeinauto.de">info@renekauftdeinauto.de</a></p>
+
+        <h3>5. Beschwerderecht</h3>
+        <p>Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Die zuständige Behörde richtet sich nach deinem Wohnsitz. Eine Liste der deutschen Aufsichtsbehörden findest du auf der Website des Bundesbeauftragten für den Datenschutz.</p>
+
+        <h3>6. Aktualität dieser Erklärung</h3>
+        <p>Diese Datenschutzerklärung ist aktuell gültig. Mit der Weiterentwicklung der Website oder geänderten Rechtslagen kann eine Anpassung notwendig werden.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 580, easing: 'ease-out-quart', once: true, offset: 50 });
+
+    // Copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Header scroll
+    const hdr = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      hdr.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    // Theme toggle
+    const toggleBtn = document.getElementById('theme-toggle');
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      toggleBtn.setAttribute('aria-label',
+        theme === 'dark' ? 'Helles Design aktivieren' : 'Dunkles Design aktivieren'
+      );
+    }
+    toggleBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+    // Sync aria-label on load
+    applyTheme('light');
+
+    // Form validation
+    function clearFieldError(field) {
+      field.classList.remove('error');
+      const existing = field.closest('.form-group').querySelector('.field-error');
+      if (existing) { existing.remove(); field.removeAttribute('aria-describedby'); }
+    }
+    function showFieldError(field, msg) {
+      clearFieldError(field);
+      field.classList.add('error');
+      const errId = field.id + '-err';
+      const err = document.createElement('div');
+      err.className = 'field-error'; err.id = errId; err.setAttribute('role', 'alert');
+      err.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>${msg}`;
+      field.closest('.form-group').appendChild(err);
+      field.setAttribute('aria-describedby', errId);
+    }
+    function validateField(field) {
+      const v = field.value.trim();
+      if (field.required && !v) { showFieldError(field, 'Dieses Feld ist erforderlich.'); return false; }
+      if (field.type === 'tel' && v && !/^[\d\s+\-/()]{6,}$/.test(v)) { showFieldError(field, 'Bitte gib eine gültige Telefonnummer ein.'); return false; }
+      if (field.required && v.length < 2) { showFieldError(field, 'Bitte gib mindestens 2 Zeichen ein.'); return false; }
+      clearFieldError(field); return true;
+    }
+    document.querySelectorAll('input[required], textarea[required]').forEach(f => {
+      f.addEventListener('blur', () => validateField(f), { passive: true });
+      f.addEventListener('input', () => { if (f.classList.contains('error')) validateField(f); }, { passive: true });
+    });
+
+    const SEND_SVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';
+
+    // Formspree: Konto erstellen auf formspree.io → Formular für info@renekauftdeinauto.de anlegen → ID hier eintragen
+    const FORMSPREE_ID = 'mlgokbwq';
+
+    function handleSubmit(event, successId) {
+      event.preventDefault();
+      const form = event.target;
+      const fields = form.querySelectorAll('input[required], textarea[required]');
+      let valid = true, first = null;
+      fields.forEach(f => { if (!validateField(f)) { valid = false; if (!first) first = f; } });
+      if (!valid) { first.focus(); return; }
+
+      const btn = form.querySelector('button[type="submit"]');
+      const ok  = document.getElementById(successId);
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner" aria-hidden="true"></span> Anfrage wird gesendet …';
+
+      if (FORMSPREE_ID === 'DEINE_FORMSPREE_ID') {
+        btn.disabled = false;
+        btn.innerHTML = SEND_SVG + ' Jetzt kostenlos anfragen';
+        const errMsg = document.createElement('p');
+        errMsg.className = 'form-send-error';
+        errMsg.style.cssText = 'color:var(--error);font-size:.85rem;margin-top:10px;';
+        errMsg.textContent = 'Formular noch nicht eingerichtet. Bitte schreib direkt an: info@renekauftdeinauto.de';
+        if (!form.querySelector('.form-send-error')) form.appendChild(errMsg);
+        return;
+      }
+
+      fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(res => {
+        if (!res.ok) throw new Error('Serverfehler ' + res.status);
+        form.reset();
+        form.querySelectorAll('input, textarea').forEach(f => clearFieldError(f));
+        form.classList.add('form-submitted');
+        ok.classList.add('show');
+      })
+      .catch(() => {
+        ok.querySelector('span:last-child') && (ok.querySelector('span:last-child').textContent = '');
+        // Fallback: Fehlermeldung anzeigen
+        const errMsg = form.querySelector('.form-send-error') || document.createElement('p');
+        errMsg.className = 'form-send-error';
+        errMsg.style.cssText = 'color:var(--error);font-size:.85rem;margin-top:10px;';
+        errMsg.textContent = 'Senden fehlgeschlagen. Bitte schreib uns direkt: info@renekauftdeinauto.de';
+        if (!form.querySelector('.form-send-error')) form.appendChild(errMsg);
+      })
+      .finally(() => {
+        btn.disabled = false;
+        btn.innerHTML = SEND_SVG + ' Jetzt kostenlos anfragen';
+      });
+    }
+
+    function resetForm(btn) {
+      const ok   = btn.closest('.form-success');
+      const form = ok.closest('form');
+      ok.classList.remove('show');
+      form.classList.remove('form-submitted');
+    }
+
+    // ─── Consent management ───────────────────────────────────────────────────
+    const YT_THUMBS = {
+      'EvXTV2qx1tk': 'https://i.ytimg.com/vi/EvXTV2qx1tk/hqdefault.jpg',
+      'TNhzN1g9MEg': 'https://i.ytimg.com/vi/TNhzN1g9MEg/hqdefault.jpg'
+    };
+
+    function loadGoogleFonts() {
+      if (document.getElementById('gfonts')) return;
+      const pre1 = document.createElement('link');
+      pre1.rel = 'preconnect'; pre1.href = 'https://fonts.googleapis.com';
+      document.head.appendChild(pre1);
+      const pre2 = document.createElement('link');
+      pre2.rel = 'preconnect'; pre2.href = 'https://fonts.gstatic.com'; pre2.crossOrigin = 'anonymous';
+      document.head.appendChild(pre2);
+      const link = document.createElement('link');
+      link.id = 'gfonts'; link.rel = 'stylesheet';
+      link.href = 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap';
+      document.head.appendChild(link);
+    }
+
+    function loadYTThumbs() {
+      document.querySelectorAll('.video-ph[data-vid]').forEach(el => {
+        const url = YT_THUMBS[el.dataset.vid];
+        if (url) el.style.backgroundImage = `url('${url}')`;
+      });
+    }
+
+    function setConsent(val) {
+      localStorage.setItem('rkauto-consent', val);
+      document.getElementById('cookie-banner').classList.add('hidden');
+      if (val === 'accepted') { loadGoogleFonts(); loadYTThumbs(); }
+    }
+
+    (function initConsent() {
+      const val = localStorage.getItem('rkauto-consent');
+      if (val === 'accepted') {
+        loadGoogleFonts();
+        loadYTThumbs();
+        document.getElementById('cookie-banner').classList.add('hidden');
+      } else if (val === 'declined') {
+        document.getElementById('cookie-banner').classList.add('hidden');
+      }
+    })();
+
+    // ─── Modals ──────────────────────────────────────────────────────────────
+    function openModal(id) {
+      const m = document.getElementById(id);
+      m.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      const closeBtn = m.querySelector('.modal-close-btn');
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.modal-overlay').forEach(m => {
+      m.addEventListener('click', e => { if (e.target === m) closeModal(m.id); });
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.open').forEach(m => closeModal(m.id));
+      }
+    });
+
+    // Easter egg
+    console.log('%c renekauftdeinauto.de ', 'background:#00b85d;color:#fff;font-weight:bold;font-size:14px;padding:4px 8px;border-radius:4px;');
+    console.log('%c Entwickler unter sich? Rene freut sich über deine Nachricht.', 'color:#666;font-size:12px;');
+  </script>
+</body>
+</html>
