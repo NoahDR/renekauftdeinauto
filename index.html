@@ -14,6 +14,8 @@
   <meta name="geo.placename" content="Aldingen">
   <link rel="canonical" href="https://renekauftdeinauto.de/">
   <link rel="sitemap" type="application/xml" href="https://renekauftdeinauto.de/sitemap.xml">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://renekauftdeinauto.de/">
@@ -32,6 +34,8 @@
   <meta name="twitter:image:alt" content="Rene Chris Almasi auf der Startseite von renekauftdeinauto.de">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2357a774'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' fill='%23f7f2e8' font-family='Georgia' font-weight='700' font-size='20'%3ER%3C/text%3E%3C/svg%3E">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/space-grotesk-latin-wght-normal.woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="preload" as="image" href="renekauftdeinauto-1400.png" imagesrcset="renekauftdeinauto-900.png 900w, renekauftdeinauto-1400.png 1400w" imagesizes="(min-width: 980px) 23vw, (max-width: 719px) calc(100vw - 2rem), 24rem" fetchpriority="high">
 
   <script type="application/ld+json">
@@ -679,8 +683,7 @@
     }
 
     .footer-contact a,
-    .footer-legal a,
-    .footer-legal button {
+    .footer-legal a {
       overflow-wrap: anywhere;
     }
 
@@ -689,6 +692,20 @@
       color: var(--ink-muted);
       font-size: 0.84rem;
       text-align: center;
+    }
+
+    .form-note a {
+      color: inherit;
+    }
+
+    .form-send-alt {
+      width: 100%;
+      margin-top: 0.6rem;
+    }
+
+    .form-success-body a {
+      color: var(--accent-contrast);
+      font-weight: 700;
     }
 
     .field-error {
@@ -725,8 +742,14 @@
     }
 
     .form-success-body span {
+      display: block;
       color: var(--ink-soft);
       font-size: 0.95rem;
+    }
+
+    .form-success-body span + span {
+      margin-top: 0.6rem;
+      font-size: 0.86rem;
     }
 
     .form-success-reset {
@@ -765,19 +788,6 @@
 
     @keyframes draw {
       to { stroke-dashoffset: 0; }
-    }
-
-    .spinner {
-      width: 0.95rem;
-      height: 0.95rem;
-      border: 2px solid rgba(247, 243, 236, 0.28);
-      border-top-color: #f7f3ec;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
     }
 
     .trust-strip {
@@ -974,6 +984,23 @@
       isolation: isolate;
     }
 
+    .video-media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .video-media::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(32, 32, 28, 0.22), rgba(12, 12, 12, 0.66));
+      z-index: 0;
+    }
+
     .video-media::after {
       content: "";
       position: absolute;
@@ -981,10 +1008,6 @@
       height: 48%;
       background: linear-gradient(180deg, rgba(16, 16, 14, 0) 0%, rgba(16, 16, 14, 0.78) 100%);
       z-index: 0;
-    }
-
-    .video-card[data-thumb="true"] .video-media {
-      background-blend-mode: multiply, normal;
     }
 
     .play-badge {
@@ -1116,8 +1139,7 @@
     }
 
     .footer-contact a,
-    .footer-legal a,
-    .footer-legal button {
+    .footer-legal a {
       display: inline-flex;
       align-items: center;
       gap: 0.55rem;
@@ -1131,8 +1153,7 @@
     }
 
     .footer-contact a:hover,
-    .footer-legal a:hover,
-    .footer-legal button:hover {
+    .footer-legal a:hover {
       color: var(--ink);
     }
 
@@ -1174,59 +1195,6 @@
       transform: translateY(0.75rem);
     }
 
-    body.consent-pending .wa-float {
-      bottom: 6rem;
-    }
-
-    .cookie-banner {
-      position: fixed;
-      left: 1rem;
-      right: 1rem;
-      bottom: 1rem;
-      z-index: 1150;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.9rem;
-      padding: 0.9rem 1rem;
-      border-radius: 1.15rem;
-      background: var(--surface-strong);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .cookie-banner.hidden {
-      display: none;
-    }
-
-    .cookie-banner p {
-      max-width: 40rem;
-      color: var(--ink-soft);
-      font-size: 0.88rem;
-    }
-
-    .cookie-copy {
-      display: grid;
-      gap: 0.35rem;
-      min-width: 0;
-    }
-
-    .link-btn {
-      display: inline-flex;
-      align-items: center;
-      width: fit-content;
-      min-height: 2.75rem;
-      padding: 0.35rem 0;
-      color: var(--accent-contrast);
-      background: transparent;
-      border: 0;
-      font-weight: 800;
-      text-decoration: underline;
-      text-decoration-thickness: 0.08em;
-      text-underline-offset: 0.16em;
-    }
-
     .section-label.is-inverse {
       color: rgba(248, 243, 234, 0.82);
     }
@@ -1246,122 +1214,6 @@
 
     .social-icon-youtube {
       color: var(--youtube);
-    }
-
-    .cookie-actions {
-      display: inline-flex;
-      gap: 0.7rem;
-      flex-wrap: wrap;
-    }
-
-    .cookie-btn-accept,
-    .cookie-btn-decline {
-      min-height: 2.8rem;
-      padding: 0.8rem 1rem;
-      border-radius: 1rem;
-      font-weight: 800;
-    }
-
-    .cookie-btn-accept {
-      color: var(--accent-ink);
-      background: var(--accent);
-      border: 1px solid transparent;
-    }
-
-    .cookie-btn-decline {
-      color: var(--ink-soft);
-      background: var(--surface-subtle);
-      border: 1px solid var(--line);
-    }
-
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 1180;
-      display: none;
-      align-items: flex-start;
-      justify-content: center;
-      padding: 1.5rem 0.9rem 2rem;
-      overflow-y: auto;
-      background: rgba(16, 18, 16, 0.46);
-    }
-
-    .modal-overlay.open {
-      display: flex;
-    }
-
-    .modal-box {
-      width: min(100%, 44rem);
-      margin: auto;
-      overflow: hidden;
-      border-radius: 1.5rem;
-      background: var(--bg-soft);
-      box-shadow: 0 22px 48px rgba(12, 18, 14, 0.24);
-    }
-
-    .modal-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 1.2rem 1.2rem 1rem;
-      border-bottom: 1px solid rgba(31, 44, 33, 0.08);
-      background: rgba(251, 247, 239, 0.96);
-      position: sticky;
-      top: 0;
-      z-index: 1;
-    }
-
-    .modal-close-btn {
-      width: 2.75rem;
-      height: 2.75rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      background: rgba(31, 44, 33, 0.06);
-      color: var(--ink-soft);
-    }
-
-    .modal-body {
-      padding: 1.2rem;
-    }
-
-    .modal-body h3 {
-      margin: 1.3rem 0 0.45rem;
-      font-size: 1rem;
-      font-weight: 800;
-    }
-
-    .modal-body h3:first-child {
-      margin-top: 0;
-    }
-
-    .modal-body h4 {
-      margin: 1rem 0 0.35rem;
-      font-size: 0.94rem;
-      font-weight: 800;
-    }
-
-    .modal-body p,
-    .modal-body li,
-    .modal-body address {
-      color: var(--ink-soft);
-      font-size: 0.94rem;
-    }
-
-    .modal-body address {
-      font-style: normal;
-      line-height: 1.8;
-    }
-
-    .modal-body a {
-      color: var(--accent);
-    }
-
-    .modal-body ul {
-      margin: 0.3rem 0 0;
-      padding-left: 1.2rem;
     }
 
     @media (min-width: 720px) {
@@ -1663,34 +1515,6 @@
         height: 1.15rem;
       }
 
-      .cookie-actions {
-        width: 100%;
-        justify-content: stretch;
-        gap: 0.55rem;
-      }
-
-      .cookie-btn-accept,
-      .cookie-btn-decline {
-        flex: 1 1 10rem;
-        min-height: 2.45rem;
-      }
-
-      .cookie-banner {
-        position: relative;
-        left: auto;
-        right: auto;
-        bottom: auto;
-        z-index: auto;
-        margin-top: 0.9rem;
-        padding: 0.8rem 0.9rem;
-        gap: 0.55rem;
-        box-shadow: var(--shadow-soft);
-      }
-
-      .cookie-banner p {
-        font-size: 0.82rem;
-      }
-
       .play-badge {
         left: 50%;
         top: 50%;
@@ -1821,7 +1645,7 @@
                 <span class="hero-tag-kicker">Persönlich vor Ort.</span>
                 <span class="hero-tag-copy">PKW &amp; LKW direkt.</span>
               </div>
-              <img src="renekauftdeinauto-1400.png" srcset="renekauftdeinauto-900.png 900w, renekauftdeinauto-1400.png 1400w" sizes="(min-width: 980px) 23vw, (max-width: 719px) calc(100vw - 2rem), 24rem" width="1400" height="787" alt="Rene Chris Almasi – Ihr persönlicher Fahrzeugankäufer" loading="eager" decoding="async" fetchpriority="high">
+              <img src="renekauftdeinauto-1400.png" srcset="renekauftdeinauto-900.png 900w, renekauftdeinauto-1400.png 1400w" sizes="(min-width: 980px) 23vw, (max-width: 719px) calc(100vw - 2rem), 24rem" width="1400" height="787" alt="Rene Chris Almasi – dein persönlicher Fahrzeugankäufer" loading="eager" decoding="async" fetchpriority="high">
             </div>
           </div>
 
@@ -1854,7 +1678,6 @@
                 Keine Inserate, keine Besichtigungstour
               </span>
             </div>
-            <div id="mobile-consent-anchor"></div>
           </div>
 
           <div class="hero-form" data-aos="fade-up" data-aos-delay="130">
@@ -1863,7 +1686,7 @@
                 <p class="form-title">Kostenlose Ersteinschätzung für PKW und LKW</p>
                 <p>Drei Angaben genügen. Ich melde mich schnell zurück und sage dir ehrlich, ob der Ankauf passt und in welchem Rahmen er realistisch ist, egal ob PKW, Transporter oder LKW.</p>
               </div>
-              <form onsubmit="handleSubmit(event,'heroOk')" novalidate>
+              <form onsubmit="handleSubmit(event, 'heroOk')" novalidate>
                 <div class="form-group">
                   <label for="h-name">Name<span class="req-mark" aria-hidden="true">*</span></label>
                   <input type="text" id="h-name" name="name" placeholder="Max Mustermann" required aria-required="true" autocomplete="name" maxlength="100">
@@ -1876,20 +1699,26 @@
                   <label for="h-car">Fahrzeugdaten<span class="req-mark" aria-hidden="true">*</span></label>
                   <input type="text" id="h-car" name="car" placeholder="z. B. BMW 3er oder MAN TGL, Baujahr, Kilometerstand, Zustand" required aria-required="true" autocomplete="off" maxlength="200">
                 </div>
-                <button type="submit" class="button-primary">
+                <button type="submit" class="button-primary" value="email">
                   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                  Jetzt unverbindlich anfragen
+                  Anfrage per E-Mail senden
                 </button>
-                <p class="form-note">Unverbindlich. Kein Ankauf ohne dein Okay.</p>
+                <button type="submit" class="button-secondary is-whatsapp form-send-alt" value="whatsapp">
+                  <svg class="social-icon-whatsapp" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                  Lieber per WhatsApp senden
+                </button>
+                <noscript><p class="form-note">Das Formular benötigt JavaScript. Schreib mir alternativ direkt an <a href="mailto:info@renekauftdeinauto.de">info@renekauftdeinauto.de</a> oder ruf an: <a href="tel:+491717778519">0171 7778519</a>.</p></noscript>
+                <p class="form-note">Unverbindlich. Kein Ankauf ohne dein Okay.<br>Deine Angaben werden nicht über diese Website übertragen, sondern in deinem E-Mail-Programm bzw. in WhatsApp zum Absenden vorbereitet. Mehr dazu im <a href="datenschutz.html#anfrageformular">Datenschutz</a>.</p>
                 <div id="heroOk" class="form-success" role="alert" aria-live="assertive">
                   <svg class="check-svg" viewBox="0 0 28 28" aria-hidden="true">
                     <circle class="check-circle" cx="14" cy="14" r="12" stroke-linecap="round"/>
                     <path class="check-path" d="M8 14l4 4 8-8" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                   <div class="form-success-body">
-                    <strong>Anfrage erhalten!</strong>
-                    <span>Vielen Dank. Ich melde mich so schnell wie möglich mit einer ehrlichen Ersteinschätzung zurück.</span>
-                    <button type="button" class="form-success-reset" onclick="resetForm(this)">Neue Anfrage stellen</button>
+                    <strong>Fast geschafft!</strong>
+                    <span data-success-text>Deine Nachricht ist vorbereitet. Bitte sende sie jetzt noch ab.</span>
+                    <span>Nichts hat sich geöffnet? Schreib direkt an <a href="mailto:info@renekauftdeinauto.de">info@renekauftdeinauto.de</a> oder ruf an: <a href="tel:+491717778519">0171 7778519</a>.</span>
+                    <button type="button" class="form-success-reset" onclick="resetForm(this)">Zurück zum Formular</button>
                   </div>
                 </div>
               </form>
@@ -1952,7 +1781,7 @@
           <div class="ankauf-top">
             <div class="section-label">Was ich ankaufe</div>
             <h2 id="ankauf-heading">PKW, Transporter und LKW aus einer Hand</h2>
-            <p class="lede">Ganz gleich ob Privatfahrzeug oder Nutzfahrzeug: Entscheidend sind ein ehrlicher Zustand, klare Angaben und ein Ablauf, der dir Zeit spart. Auch Nutzer, die künftig über renekauftdeinlkw.de hier landen, finden auf dieser Seite sofort den passenden Ankauf.</p>
+            <p class="lede">Ganz gleich ob Privatfahrzeug oder Nutzfahrzeug: Entscheidend sind ein ehrlicher Zustand, klare Angaben und ein Ablauf, der dir Zeit spart.</p>
           </div>
           <div class="ankauf-grid" role="list">
             <div class="ankauf-item" role="listitem">
@@ -1990,7 +1819,7 @@
           <div class="why-intro" data-aos="fade-up">
             <div class="section-label">Warum Rene</div>
             <h2 id="vorteile-heading">Warum viele lieber direkt verkaufen statt selbst zu inserieren.</h2>
-            <p class="lede">Weil Zeit, Nerven und Verhandlungstheater oft teurer sind als ein sauberer Direktverkauf. Wenn diese Seite überzeugen soll, dann nicht durch Druck, sondern durch Klarheit, Tempo und echten persönlichen Kontakt.</p>
+            <p class="lede">Weil Zeit, Nerven und Verhandlungstheater oft teurer sind als ein sauberer Direktverkauf. Ich setze nicht auf Druck, sondern auf Klarheit, Tempo und echten persönlichen Kontakt.</p>
           </div>
           <div class="why-list">
             <article class="why-item" data-aos="fade-up" data-aos-delay="60">
@@ -2027,8 +1856,9 @@
           </a>
         </div>
         <div class="video-grid">
-          <a class="video-card" href="https://www.youtube.com/watch?v=EvXTV2qx1tk" target="_blank" rel="noopener noreferrer" data-vid="EvXTV2qx1tk" data-aos="fade-up">
+          <a class="video-card" href="https://www.youtube.com/watch?v=EvXTV2qx1tk" target="_blank" rel="noopener noreferrer" data-aos="fade-up">
             <div class="video-media">
+              <img src="assets/img/video-EvXTV2qx1tk.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
               <div class="play-badge" aria-hidden="true">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
               </div>
@@ -2038,8 +1868,9 @@
               <p>Ein direkter Einblick in meinen Ablauf, damit du vor deiner Anfrage schon ein Gefühl dafür bekommst, wie sauber und unkompliziert das Ganze abläuft.</p>
             </div>
           </a>
-          <a class="video-card" href="https://www.youtube.com/watch?v=TNhzN1g9MEg" target="_blank" rel="noopener noreferrer" data-vid="TNhzN1g9MEg" data-aos="fade-up" data-aos-delay="90">
+          <a class="video-card" href="https://www.youtube.com/watch?v=TNhzN1g9MEg" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="90">
             <div class="video-media">
+              <img src="assets/img/video-TNhzN1g9MEg.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
               <div class="play-badge" aria-hidden="true">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
               </div>
@@ -2111,9 +1942,8 @@
           </a>
         </div>
         <div class="footer-legal" aria-label="Rechtliches">
-          <button onclick="openModal('impressum-modal')">Impressum</button>
-          <button onclick="openModal('datenschutz-modal')">Datenschutz</button>
-          <button onclick="openConsentSettings()">Datenschutz-Einstellungen</button>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -2128,151 +1958,6 @@
     </svg>
     WhatsApp
   </a>
-
-  <div id="cookie-banner-home"></div>
-  <div id="cookie-banner" class="cookie-banner" role="region" aria-label="Datenschutzhinweis">
-    <div class="cookie-copy">
-      <p>Google Fonts und YouTube-Vorschaubilder laden erst nach deiner Zustimmung.</p>
-      <button class="link-btn" onclick="openModal('datenschutz-modal')">Datenschutzerklärung</button>
-    </div>
-    <div class="cookie-actions">
-      <button class="cookie-btn-decline" onclick="setConsent('declined')">Nur Notwendige</button>
-      <button class="cookie-btn-accept" onclick="setConsent('accepted')">Akzeptieren</button>
-    </div>
-  </div>
-
-  <div id="impressum-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="impressum-title">
-    <div class="modal-box">
-      <div class="modal-header">
-        <h2 id="impressum-title">Impressum</h2>
-        <button class="modal-close-btn" onclick="closeModal('impressum-modal')" aria-label="Impressum schließen">&#x2715;</button>
-      </div>
-      <div class="modal-body">
-        <h3>Angaben gemäß § 5 DDG</h3>
-        <address>
-          Rene Chris Almasi<br>
-          Einzelunternehmer<br>
-          Langäckerstraße 25<br>
-          78554 Aldingen<br>
-          Deutschland
-        </address>
-
-        <h3>Kontakt</h3>
-        <p>
-          Telefon: <a href="tel:+491717778519">0171 7778519</a><br>
-          E-Mail: <a href="mailto:info@renekauftdeinauto.de">info@renekauftdeinauto.de</a>
-        </p>
-
-        <h3>Gewerbe</h3>
-        <p>Gewerbe angemeldet bei der Gemeinde Aldingen (Gewerbeanmeldung vom 08.04.2026).<br>
-        Tätigkeit: An- und Verkauf von Kraftfahrzeugen, Onlinehandel, Erstellung und Vertrieb digitaler Produkte, Durchführung von Schulungen und Workshops sowie Online-Marketing und Werbung.</p>
-
-        <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
-        <address>
-          Rene Chris Almasi<br>
-          Langäckerstraße 25<br>
-          78554 Aldingen
-        </address>
-
-        <h3>Verbraucherstreitbeilegung</h3>
-        <p>Ich bin nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
-
-        <h3>Haftung für Inhalte</h3>
-        <p>Als Diensteanbieter bin ich für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich (§ 7 Abs. 1 DDG). Nach §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden entsprechender Rechtsverletzungen entferne ich diese Inhalte umgehend.</p>
-        <p>Die Angaben auf dieser Website sind unverbindlich und stellen kein verbindliches Kaufangebot dar. Ein Ankauf kommt erst durch einen gesonderten Kaufvertrag zustande.</p>
-
-        <h3>Haftung für Links</h3>
-        <p>Diese Website enthält Links zu externen Websites Dritter (z. B. WhatsApp und YouTube), auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft; rechtswidrige Inhalte waren zu diesem Zeitpunkt nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen entferne ich derartige Links umgehend.</p>
-
-        <h3>Urheberrecht</h3>
-        <p>Die durch den Seitenbetreiber erstellten Inhalte, Texte und Bilder auf dieser Website unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der vorherigen schriftlichen Zustimmung des Seitenbetreibers. Solltest du trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen entferne ich derartige Inhalte umgehend.</p>
-      </div>
-    </div>
-  </div>
-
-  <div id="datenschutz-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="datenschutz-title">
-    <div class="modal-box">
-      <div class="modal-header">
-        <h2 id="datenschutz-title">Datenschutzerklärung</h2>
-        <button class="modal-close-btn" onclick="closeModal('datenschutz-modal')" aria-label="Datenschutzerklärung schließen">&#x2715;</button>
-      </div>
-      <div class="modal-body">
-        <h3>1. Verantwortlicher</h3>
-        <p>Verantwortlich für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
-        <address>
-          Rene Chris Almasi<br>
-          Langäckerstraße 25<br>
-          78554 Aldingen<br>
-          Deutschland<br><br>
-          Telefon: <a href="tel:+491717778519">0171 7778519</a><br>
-          E-Mail: <a href="mailto:info@renekauftdeinauto.de">info@renekauftdeinauto.de</a>
-        </address>
-        <p>Ein Datenschutzbeauftragter ist nicht bestellt, da hierfür keine gesetzliche Pflicht besteht.</p>
-
-        <h3>2. Hosting und Server-Logfiles</h3>
-        <p>Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf der Website verarbeitet GitHub technisch notwendige Daten, insbesondere deine IP-Adresse, Datum und Uhrzeit des Abrufs, die aufgerufene Seite, Browsertyp und Betriebssystem. Diese Daten sind erforderlich, um die Website auszuliefern und die Sicherheit und Stabilität des Angebots zu gewährleisten.</p>
-        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO. Mein berechtigtes Interesse liegt in der sicheren und zuverlässigen Bereitstellung der Website.</p>
-        <p><strong>Drittlandübermittlung:</strong> Dabei können Daten in die USA übermittelt werden. Die Übermittlung erfolgt auf Grundlage des Angemessenheitsbeschlusses der EU-Kommission zum EU-US Data Privacy Framework (Art. 45 DSGVO), soweit der Anbieter danach zertifiziert ist, und ergänzend auf Grundlage von EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO). Weitere Informationen: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von GitHub</a></p>
-
-        <h3>3. Kontaktformular (Formspree)</h3>
-        <p>Wenn du das Anfrageformular nutzt, werden deine Angaben (Name, Telefonnummer und Fahrzeugdaten) zum Zweck der Bearbeitung deiner Anfrage und zur Unterbreitung eines Ankaufangebots für dein Fahrzeug verarbeitet. Die Angabe dieser Daten ist freiwillig, ohne sie kann ich deine Anfrage jedoch nicht bearbeiten.</p>
-        <p>Für den Versand der Formulardaten nutze ich den Dienst Formspree der Formspree, Inc., USA. Deine Eingaben sowie technische Daten (z. B. IP-Adresse und Zeitpunkt der Übermittlung) werden dabei an Server von Formspree übertragen und von dort per E-Mail an mich weitergeleitet. Formspree verarbeitet die Daten in meinem Auftrag.</p>
-        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Durchführung vorvertraglicher Maßnahmen auf deine Anfrage) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer effizienten Bearbeitung von Anfragen).</p>
-        <p><strong>Drittlandübermittlung:</strong> Die Übermittlung in die USA erfolgt auf Grundlage des EU-US Data Privacy Framework (Art. 45 DSGVO), soweit der Anbieter danach zertifiziert ist, und ergänzend auf Grundlage von EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO). Weitere Informationen: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Formspree</a></p>
-        <p><strong>Speicherdauer:</strong> Deine Daten werden gelöscht, sobald deine Anfrage abschließend bearbeitet ist und kein Vertrag zustande kommt. Kommt ein Fahrzeugankauf zustande, werden die Daten nach Ablauf der gesetzlichen Aufbewahrungsfristen (insbesondere § 147 AO und § 257 HGB, bis zu zehn Jahre) gelöscht.</p>
-        <p>Die Daten werden nicht an unbeteiligte Dritte weitergegeben und nicht für Werbezwecke verwendet.</p>
-
-        <h3>4. Kontakt per Telefon, E-Mail und WhatsApp</h3>
-        <p>Wenn du mich per Telefon, E-Mail oder WhatsApp kontaktierst, verarbeite ich die von dir mitgeteilten Daten (z. B. Name, Telefonnummer, E-Mail-Adresse, Fahrzeugdaten, Fotos) zur Bearbeitung deiner Anfrage. Für Rechtsgrundlage und Speicherdauer gilt das unter Ziffer 3 Gesagte entsprechend.</p>
-        <p>Die WhatsApp-Schaltflächen auf dieser Website sind einfache Links. Es werden keine Daten an WhatsApp übertragen, solange du sie nicht anklickst. Erst nach dem Klick wirst du zu WhatsApp weitergeleitet. Für die Verarbeitung durch WhatsApp ist die WhatsApp Ireland Limited, Merrion Road, Dublin 4, D04 X2K5, Irland, verantwortlich. Dabei kann eine Übermittlung in die USA stattfinden. Wenn du das nicht möchtest, nutze bitte Telefon, E-Mail oder das Formular. Weitere Informationen: <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener noreferrer">Datenschutzrichtlinie von WhatsApp</a></p>
-
-        <h3>5. Einwilligung und Speicherung deiner Auswahl</h3>
-        <p>Beim ersten Besuch fragt dich ein Hinweisbanner, ob externe Inhalte (Google Fonts und YouTube-Vorschaubilder) geladen werden dürfen. Ohne deine Zustimmung werden diese Inhalte nicht geladen.</p>
-        <p>Deine Auswahl („Akzeptieren“ oder „Nur Notwendige“) wird im lokalen Speicher (Local Storage) deines Browsers abgelegt, damit das Banner nicht bei jedem Besuch erneut erscheint. Diese Information wird nicht an mich oder Dritte übertragen. Die Speicherung ist für den von dir gewünschten Dienst unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Rechtsgrundlage für die damit verbundene Verarbeitung ist Art. 6 Abs. 1 lit. c DSGVO in Verbindung mit Art. 7 Abs. 1 DSGVO (Nachweis der Einwilligung).</p>
-        <p>Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen oder ändern: <button type="button" class="link-btn" onclick="openConsentSettings()">Datenschutz-Einstellungen öffnen</button></p>
-
-        <h3>6. Externe Dienste (nur mit Einwilligung)</h3>
-        <h4>Google Fonts</h4>
-        <p>Diese Website kann Schriftarten von Google Fonts der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, nachladen. Die Schriftarten werden ausschließlich nach deiner Einwilligung geladen. Dabei wird deine IP-Adresse an Server von Google übermittelt; eine Übermittlung in die USA ist möglich. Google LLC ist nach dem EU-US Data Privacy Framework zertifiziert.</p>
-        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG (Einwilligung) &nbsp;|&nbsp; <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Datenschutzerklärung</a></p>
-
-        <h4>YouTube-Vorschaubilder und -Links</h4>
-        <p>Diese Website verlinkt auf Videos bei YouTube (Google Ireland Limited, Anschrift wie oben). Die Vorschaubilder werden erst nach deiner Einwilligung von Servern von YouTube geladen; dabei wird deine IP-Adresse an Google übermittelt. Die Videos selbst sind nicht eingebettet, sondern werden erst bei einem aktiven Klick direkt auf YouTube geöffnet. Ab diesem Zeitpunkt gilt die Datenschutzerklärung von Google.</p>
-        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG (Einwilligung) &nbsp;|&nbsp; <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Datenschutzerklärung</a></p>
-
-        <h3>7. Keine Analyse- oder Tracking-Tools</h3>
-        <p>Diese Website setzt keine Analyse-, Tracking- oder Werbe-Tools ein und verwendet keine Cookies. Eine automatisierte Entscheidungsfindung einschließlich Profiling (Art. 22 DSGVO) findet nicht statt.</p>
-
-        <h3>8. Deine Rechte</h3>
-        <p>Dir stehen hinsichtlich deiner personenbezogenen Daten folgende Rechte zu:</p>
-        <ul>
-          <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
-          <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
-          <li>Recht auf Löschung (Art. 17 DSGVO)</li>
-          <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-          <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
-          <li>Recht auf Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO)</li>
-        </ul>
-        <p><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Soweit ich deine Daten auf Grundlage berechtigter Interessen (Art. 6 Abs. 1 lit. f DSGVO) verarbeite, hast du das Recht, aus Gründen, die sich aus deiner besonderen Situation ergeben, jederzeit Widerspruch gegen diese Verarbeitung einzulegen.</p>
-        <p>Zur Ausübung deiner Rechte genügt eine formlose Nachricht an: <a href="mailto:info@renekauftdeinauto.de">info@renekauftdeinauto.de</a></p>
-
-        <h3>9. Beschwerderecht bei einer Aufsichtsbehörde</h3>
-        <p>Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77 DSGVO), insbesondere in dem Mitgliedstaat deines Wohnsitzes, deines Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes. Für mich zuständig ist:</p>
-        <address>
-          Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg<br>
-          Lautenschlagerstraße 20<br>
-          70173 Stuttgart<br>
-          <a href="https://www.baden-wuerttemberg.datenschutz.de/" target="_blank" rel="noopener noreferrer">www.baden-wuerttemberg.datenschutz.de</a>
-        </address>
-
-        <h3>10. SSL-/TLS-Verschlüsselung</h3>
-        <p>Diese Website nutzt aus Sicherheitsgründen eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennst du an „https://“ in der Adresszeile deines Browsers.</p>
-
-        <h3>11. Aktualität dieser Erklärung</h3>
-        <p>Stand: November 2026. Durch die Weiterentwicklung der Website oder geänderte gesetzliche Vorgaben kann eine Anpassung dieser Datenschutzerklärung notwendig werden.</p>
-      </div>
-    </div>
-  </div>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -2314,11 +1999,6 @@
       field.setAttribute('aria-describedby', errId);
     }
 
-    function clearFormSendError(form) {
-      const errMsg = form.querySelector('.form-send-error');
-      if (errMsg) errMsg.remove();
-    }
-
     function validateField(field) {
       const value = field.value.trim();
       if (field.required && !value) {
@@ -2344,70 +2024,61 @@
       }, { passive: true });
     });
 
-    const SEND_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';
-    const FORMSPREE_ID = 'mlgokbwq';
+    const CONTACT_EMAIL = 'info@renekauftdeinauto.de';
+    const WHATSAPP_NUMBER = '491717778519';
 
+    const SUCCESS_TEXT = {
+      email: 'Dein E-Mail-Programm wurde mit deiner Anfrage geöffnet. Bitte sende die E-Mail dort noch ab.',
+      whatsapp: 'WhatsApp wurde mit deiner Anfrage geöffnet. Bitte sende die Nachricht dort noch ab.',
+    };
+
+    function buildInquiryText(form) {
+      const name = form.elements.name.value.trim();
+      const phone = form.elements.phone.value.trim();
+      const car = form.elements.car.value.trim();
+      return [
+        'Hallo Rene,',
+        '',
+        'ich interessiere mich für eine kostenlose Ersteinschätzung zu meinem Fahrzeug.',
+        '',
+        'Name: ' + name,
+        'Telefon: ' + phone,
+        'Fahrzeug: ' + car,
+        '',
+        'Viele Grüße',
+        name,
+      ].join('\n');
+    }
+
+    // The form never transmits data itself: it only prepares a message in the
+    // visitor's own e-mail program or WhatsApp, which they then send themselves.
     function handleSubmit(event, successId) {
       event.preventDefault();
       const form = event.target;
-      const fields = form.querySelectorAll('input[required], textarea[required]');
-      let valid = true;
-      let first = null;
+      const fields = Array.from(form.querySelectorAll('input[required], textarea[required]'));
+      const invalid = fields.filter((field) => !validateField(field));
 
-      clearFormSendError(form);
-
-      fields.forEach((field) => {
-        if (!validateField(field)) {
-          valid = false;
-          if (!first) first = field;
-        }
-      });
-
-      if (!valid) {
-        first.focus();
+      if (invalid.length) {
+        invalid[0].focus();
         return;
       }
 
-      const btn = form.querySelector('button[type="submit"]');
+      const channel = event.submitter && event.submitter.value === 'whatsapp' ? 'whatsapp' : 'email';
+      const text = buildInquiryText(form);
+
+      if (channel === 'whatsapp') {
+        window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
+      } else {
+        const subject = 'Fahrzeuganfrage: ' + form.elements.car.value.trim();
+        window.location.href = 'mailto:' + CONTACT_EMAIL
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(text);
+      }
+
       const ok = document.getElementById(successId);
-      ok.classList.remove('show');
-      btn.disabled = true;
-      btn.innerHTML = '<span class="spinner" aria-hidden="true"></span> Anfrage wird gesendet …';
-
-      if (FORMSPREE_ID === 'DEINE_FORMSPREE_ID') {
-        btn.disabled = false;
-        btn.innerHTML = SEND_SVG + ' Jetzt kostenlos anfragen';
-        const errMsg = document.createElement('p');
-        errMsg.className = 'form-send-error';
-        errMsg.style.cssText = 'color:var(--error);font-size:.85rem;margin-top:10px;';
-        errMsg.textContent = 'Formular noch nicht eingerichtet. Bitte schreib direkt an: info@renekauftdeinauto.de';
-        if (!form.querySelector('.form-send-error')) form.appendChild(errMsg);
-        return;
-      }
-
-      fetch('https://formspree.io/f/' + FORMSPREE_ID, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      })
-        .then((res) => {
-          if (!res.ok) throw new Error('Serverfehler ' + res.status);
-          form.reset();
-          form.querySelectorAll('input, textarea').forEach((field) => clearFieldError(field));
-          form.classList.add('form-submitted');
-          ok.classList.add('show');
-        })
-        .catch(() => {
-          const errMsg = form.querySelector('.form-send-error') || document.createElement('p');
-          errMsg.className = 'form-send-error';
-          errMsg.style.cssText = 'color:var(--error);font-size:.85rem;margin-top:10px;';
-          errMsg.textContent = 'Senden fehlgeschlagen. Bitte prüfe kurz deine Verbindung oder schreib direkt an: info@renekauftdeinauto.de';
-          if (!form.querySelector('.form-send-error')) form.appendChild(errMsg);
-        })
-        .finally(() => {
-          btn.disabled = false;
-          btn.innerHTML = SEND_SVG + ' Jetzt kostenlos anfragen';
-        });
+      ok.querySelector('[data-success-text]').textContent = SUCCESS_TEXT[channel];
+      form.classList.add('form-submitted');
+      ok.classList.add('show');
     }
 
     function resetForm(btn) {
@@ -2415,60 +2086,10 @@
       const form = ok.closest('form');
       ok.classList.remove('show');
       form.classList.remove('form-submitted');
-      clearFormSendError(form);
     }
 
-    const YT_THUMBS = {
-      'EvXTV2qx1tk': 'https://i.ytimg.com/vi/EvXTV2qx1tk/hqdefault.jpg',
-      'TNhzN1g9MEg': 'https://i.ytimg.com/vi/TNhzN1g9MEg/hqdefault.jpg'
-    };
-
-    function loadGoogleFonts() {
-      if (document.getElementById('gfonts')) return;
-      const preconnectApi = document.createElement('link');
-      preconnectApi.rel = 'preconnect';
-      preconnectApi.href = 'https://fonts.googleapis.com';
-      document.head.appendChild(preconnectApi);
-
-      const preconnectStatic = document.createElement('link');
-      preconnectStatic.rel = 'preconnect';
-      preconnectStatic.href = 'https://fonts.gstatic.com';
-      preconnectStatic.crossOrigin = 'anonymous';
-      document.head.appendChild(preconnectStatic);
-
-      const link = document.createElement('link');
-      link.id = 'gfonts';
-      link.rel = 'stylesheet';
-      link.href = 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap';
-      document.head.appendChild(link);
-    }
-
-    function loadYTThumbs() {
-      document.querySelectorAll('.video-card[data-vid]').forEach((card) => {
-        const vid = card.dataset.vid;
-        const url = YT_THUMBS[vid];
-        const media = card.querySelector('.video-media');
-        if (!url || !media) return;
-        media.style.backgroundImage = "linear-gradient(180deg, rgba(32, 32, 28, 0.22), rgba(12, 12, 12, 0.66)), url('" + url + "')";
-        card.dataset.thumb = 'true';
-      });
-    }
-
-    const bodyChildren = Array.from(document.body.children);
-    const cookieBanner = document.getElementById('cookie-banner');
-    const cookieBannerHome = document.getElementById('cookie-banner-home');
-    const mobileConsentAnchor = document.getElementById('mobile-consent-anchor');
     const floatingWhatsApp = document.querySelector('.wa-float');
     const floatingTrigger = document.getElementById('prozess');
-    let activeModal = null;
-    let lastModalTrigger = null;
-
-    function syncConsentPlacement() {
-      if (!cookieBanner || !mobileConsentAnchor || !cookieBannerHome) return;
-      const target = window.innerWidth <= 719 ? mobileConsentAnchor : cookieBannerHome;
-      if (cookieBanner.parentElement !== target) target.appendChild(cookieBanner);
-    }
-
     function syncFloatingWhatsApp(forceShow = null) {
       if (!floatingWhatsApp) return;
 
@@ -2488,142 +2109,9 @@
       floatingWhatsApp.classList.toggle('is-hidden', !shouldShow);
     }
 
-    const CONSENT_KEY = 'rkauto-consent';
-
-    function readConsent() {
-      try {
-        return localStorage.getItem(CONSENT_KEY);
-      } catch {
-        return null;
-      }
-    }
-
-    function writeConsent(val) {
-      try {
-        localStorage.setItem(CONSENT_KEY, val);
-      } catch {
-        // Storage unavailable (private mode, blocked site data): consent applies to this page view only.
-      }
-    }
-
-    function setConsent(val) {
-      const previous = readConsent();
-      writeConsent(val);
-
-      // Already loaded third-party resources cannot be unloaded; a reload enforces the withdrawal.
-      if (previous === 'accepted' && val !== 'accepted') {
-        window.location.reload();
-        return;
-      }
-
-      document.body.classList.remove('consent-pending');
-      cookieBanner.classList.add('hidden');
-      if (val === 'accepted') {
-        loadGoogleFonts();
-        loadYTThumbs();
-      }
-      syncConsentPlacement();
-      syncFloatingWhatsApp(false);
-    }
-
-    function openConsentSettings() {
-      if (activeModal) closeModal(activeModal.id);
-      document.body.classList.add('consent-pending');
-      syncConsentPlacement();
-      cookieBanner.classList.remove('hidden');
-      const acceptBtn = cookieBanner.querySelector('.cookie-btn-accept');
-      if (acceptBtn) acceptBtn.focus();
-    }
-
-    (function initConsent() {
-      const val = readConsent();
-      if (!val) document.body.classList.add('consent-pending');
-      syncConsentPlacement();
-      if (val === 'accepted') {
-        loadGoogleFonts();
-        loadYTThumbs();
-        cookieBanner.classList.add('hidden');
-      } else if (val === 'declined') {
-        cookieBanner.classList.add('hidden');
-      }
-      syncFloatingWhatsApp(false);
-    })();
-
-    function getFocusableWithin(root) {
-      return Array.from(root.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'))
-        .filter((element) => element.offsetParent !== null);
-    }
-
-    function setPageIsolation(openModalElement) {
-      bodyChildren.forEach((child) => {
-        if (child === openModalElement) return;
-        child.dataset.wasAriaHidden = child.getAttribute('aria-hidden') || '';
-        child.setAttribute('aria-hidden', 'true');
-        child.inert = true;
-      });
-    }
-
-    function clearPageIsolation() {
-      bodyChildren.forEach((child) => {
-        const previous = child.dataset.wasAriaHidden;
-        if (previous) child.setAttribute('aria-hidden', previous);
-        else child.removeAttribute('aria-hidden');
-        delete child.dataset.wasAriaHidden;
-        child.inert = false;
-      });
-    }
-
-    function openModal(id) {
-      const modal = document.getElementById(id);
-      lastModalTrigger = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-      activeModal = modal;
-      modal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-      setPageIsolation(modal);
-      const focusTarget = modal.querySelector('.modal-close-btn') || getFocusableWithin(modal)[0];
-      if (focusTarget) focusTarget.focus();
-    }
-
-    function closeModal(id) {
-      const modal = document.getElementById(id);
-      modal.classList.remove('open');
-      document.body.style.overflow = '';
-      clearPageIsolation();
-      activeModal = null;
-      if (lastModalTrigger) lastModalTrigger.focus();
-      lastModalTrigger = null;
-    }
-
-    document.querySelectorAll('.modal-overlay').forEach((modal) => {
-      modal.addEventListener('click', (event) => {
-        if (event.target === modal) closeModal(modal.id);
-      });
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (activeModal && event.key === 'Tab') {
-        const focusable = getFocusableWithin(activeModal);
-        if (!focusable.length) return;
-
-        const first = focusable[0];
-        const last = focusable[focusable.length - 1];
-
-        if (event.shiftKey && document.activeElement === first) {
-          event.preventDefault();
-          last.focus();
-        } else if (!event.shiftKey && document.activeElement === last) {
-          event.preventDefault();
-          first.focus();
-        }
-      }
-
-      if (event.key === 'Escape') {
-        document.querySelectorAll('.modal-overlay.open').forEach((modal) => closeModal(modal.id));
-      }
-    });
+    syncFloatingWhatsApp(false);
 
     window.addEventListener('resize', () => {
-      syncConsentPlacement();
       syncFloatingWhatsApp(false);
     }, { passive: true });
 
