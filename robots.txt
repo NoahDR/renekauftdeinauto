@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://renekauftdeinauto.de/sitemap.xml
-Host: renekauftdeinauto.de

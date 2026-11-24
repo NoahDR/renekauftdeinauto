@@ -230,7 +230,6 @@
       background: color-mix(in srgb, var(--accent) 72%, white 28%);
     }
 
-    .section-title,
     h1,
     h2,
     h3,
@@ -240,8 +239,7 @@
       text-wrap: balance;
     }
 
-    h1,
-    .section-title {
+    h1 {
       font-family: var(--font-display);
       font-size: clamp(2.7rem, 6.2vw, 4.9rem);
       line-height: 0.94;
@@ -355,7 +353,6 @@
     .nav-cta,
     .button-primary,
     .button-secondary,
-    .button-ghost,
     .button-inline {
       display: inline-flex;
       align-items: center;
@@ -391,17 +388,10 @@
     }
 
     .button-secondary:hover,
-    .button-ghost:hover,
     .button-inline:hover {
       transform: translateY(-1px);
       border-color: var(--line-strong);
       color: var(--ink);
-    }
-
-    .button-ghost {
-      color: var(--ink-soft);
-      background: var(--surface-subtle);
-      border: 1px solid var(--line);
     }
 
     .button-inline {
@@ -1404,8 +1394,7 @@
       }
 
       .button-primary,
-      .button-secondary,
-      .button-ghost {
+      .button-secondary {
         width: 100%;
       }
 
@@ -1639,7 +1628,7 @@
     <section id="hero" class="section" aria-labelledby="hero-heading">
       <div class="shell">
         <div class="hero-shell">
-          <div class="hero-media" data-aos="fade-up">
+          <div class="hero-media">
             <div class="hero-portrait">
               <div class="hero-tag">
                 <span class="hero-tag-kicker">Persönlich vor Ort.</span>
@@ -1649,13 +1638,13 @@
             </div>
           </div>
 
-          <div class="hero-copy" data-aos="fade-up" data-aos-delay="40">
+          <div class="hero-copy">
             <div class="eyebrow">Premium Ankauf ohne Stress</div>
             <h1 id="hero-heading">Ich kaufe dein <span class="accent">Fahrzeug direkt</span>, fair und ohne Umwege.</h1>
             <p class="lede">Kein Besichtigungsstress, kein Preisdruck. Du bekommst eine schnelle Einschätzung und direkten Kontakt zu mir.</p>
           </div>
 
-          <div class="hero-actions" data-aos="fade-up" data-aos-delay="90">
+          <div class="hero-actions">
             <a href="https://wa.me/491717778519" target="_blank" rel="noopener noreferrer" class="button-primary">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
@@ -1680,7 +1669,7 @@
             </div>
           </div>
 
-          <div class="hero-form" data-aos="fade-up" data-aos-delay="130">
+          <div class="hero-form">
             <div class="form-card" id="anfrage">
               <div class="form-head">
                 <p class="form-title">Kostenlose Ersteinschätzung für PKW und LKW</p>
@@ -1732,15 +1721,15 @@
       <div class="shell">
         <h2 id="trust-heading" class="sr-only">Drei klare Vorteile beim Fahrzeugankauf mit Rene Chris Almasi</h2>
         <div class="trust-grid">
-          <article class="trust-card" data-aos="fade-up">
+          <article class="trust-card">
             <h3>Kein Inserat, kein Verkaufschaos</h3>
             <p>Du sparst dir Fotos, Rückfragen, No-Shows und endlose Preisgespräche. Der Ablauf bleibt schnell und klar, egal ob PKW, Transporter oder LKW.</p>
           </article>
-          <article class="trust-card" data-aos="fade-up" data-aos-delay="70">
+          <article class="trust-card">
             <h3>Direkt mit Rene</h3>
             <p>Kein Vermittler, kein Callcenter, kein Lead-Trichter. Du sprichst direkt mit der Person, die dein Fahrzeug einschätzt und später auch wirklich ankauft.</p>
           </article>
-          <article class="trust-card" data-aos="fade-up" data-aos-delay="140">
+          <article class="trust-card">
             <h3>Faire Einschätzung statt Lockpreis</h3>
             <p>Ich mache keine Fantasiepreise nur für Klicks. Du bekommst eine ehrliche Bewertung und eine saubere Übergabe für PKW wie auch für LKW.</p>
           </article>
@@ -1750,23 +1739,23 @@
 
     <section id="prozess" class="section" aria-labelledby="prozess-heading">
       <div class="shell">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header">
           <div class="section-label">So läuft es ab</div>
           <h2 id="prozess-heading">Drei Schritte. Kein typischer Privatmarkt-Stress.</h2>
           <p class="lede">Der Ablauf soll sich wie ein direkter Service anfühlen, nicht wie ein wochenlanger Verkauf mit fremden Leuten vor der Haustür oder auf dem Betriebsgelände.</p>
         </div>
         <div class="process-grid">
-          <article class="process-step" data-aos="fade-up">
+          <article class="process-step">
             <div class="step-index">01</div>
             <h3>Fahrzeug kurz schicken</h3>
             <p>Du schreibst mir bei WhatsApp oder nutzt das Formular. Kurz, direkt und ohne unnötige Pflichtfelder.</p>
           </article>
-          <article class="process-step" data-aos="fade-up" data-aos-delay="70">
+          <article class="process-step">
             <div class="step-index">02</div>
             <h3>Ehrliche Ersteinschätzung</h3>
             <p>Ich melde mich schnell zurück, stelle bei Bedarf ein paar Rückfragen und sage dir offen, was realistisch ist, statt dich mit einem Lockpreis in ein Gespräch zu ziehen.</p>
           </article>
-          <article class="process-step" data-aos="fade-up" data-aos-delay="140">
+          <article class="process-step">
             <div class="step-index">03</div>
             <h3>Abholen &amp; direkt bezahlen</h3>
             <p>Wenn alles passt, hole ich dein Fahrzeug ab und die Bezahlung wird direkt sauber abgewickelt, ohne unangenehme Nachverhandlung vor Ort.</p>
@@ -1777,7 +1766,7 @@
 
     <section id="ankauf-typen" class="section" aria-labelledby="ankauf-heading">
       <div class="shell">
-        <div class="ankauf-panel" data-aos="fade-up">
+        <div class="ankauf-panel">
           <div class="ankauf-top">
             <div class="section-label">Was ich ankaufe</div>
             <h2 id="ankauf-heading">PKW, Transporter und LKW aus einer Hand</h2>
@@ -1816,23 +1805,23 @@
     <section id="vorteile" class="section" aria-labelledby="vorteile-heading">
       <div class="shell">
         <div class="why-layout">
-          <div class="why-intro" data-aos="fade-up">
+          <div class="why-intro">
             <div class="section-label">Warum Rene</div>
             <h2 id="vorteile-heading">Warum viele lieber direkt verkaufen statt selbst zu inserieren.</h2>
             <p class="lede">Weil Zeit, Nerven und Verhandlungstheater oft teurer sind als ein sauberer Direktverkauf. Ich setze nicht auf Druck, sondern auf Klarheit, Tempo und echten persönlichen Kontakt.</p>
           </div>
           <div class="why-list">
-            <article class="why-item" data-aos="fade-up" data-aos-delay="60">
+            <article class="why-item">
               <span class="why-kicker">Persönlicher Kontakt</span>
               <h3>Du sprichst mit mir, nicht mit fünf Stationen dazwischen.</h3>
               <p>Wenn du Fragen hast, bekommst du Antworten von der Person, die später auch tatsächlich bei der Übergabe auftaucht. Das schafft Klarheit und spart Zeit.</p>
             </article>
-            <article class="why-item" data-aos="fade-up" data-aos-delay="120">
+            <article class="why-item">
               <span class="why-kicker">Faire Erwartung</span>
               <h3>Ich locke nicht mit Fantasiepreisen und drücke dann alles vor Ort runter.</h3>
               <p>Mir ist wichtiger, dass der Ablauf sauber und glaubwürdig bleibt, als mit unrealistischen Versprechen erst Aufmerksamkeit zu erzeugen und später Enttäuschung zu produzieren.</p>
             </article>
-            <article class="why-item" data-aos="fade-up" data-aos-delay="180">
+            <article class="why-item">
               <span class="why-kicker">Deutschlandweit</span>
               <h3>Von der ersten Nachricht bis zur Abholung soll es für dich einfach bleiben.</h3>
               <p>Ob privater Stellplatz, Hof oder Betriebsgelände: ich komme zu dir, wenn der Ankauf passt. So sparst du dir zusätzliche Wege, Termine und unnötigen Organisationsaufwand.</p>
@@ -1844,7 +1833,7 @@
 
     <section id="videos" class="section" aria-labelledby="videos-heading">
       <div class="shell">
-        <div class="videos-top" data-aos="fade-up">
+        <div class="videos-top">
           <div>
             <div class="section-label">Praxis statt Behauptung</div>
             <h2 id="videos-heading">Schau dir an, wie ich arbeite.</h2>
@@ -1856,7 +1845,7 @@
           </a>
         </div>
         <div class="video-grid">
-          <a class="video-card" href="https://www.youtube.com/watch?v=EvXTV2qx1tk" target="_blank" rel="noopener noreferrer" data-aos="fade-up">
+          <a class="video-card" href="https://www.youtube.com/watch?v=EvXTV2qx1tk" target="_blank" rel="noopener noreferrer">
             <div class="video-media">
               <img src="assets/img/video-EvXTV2qx1tk.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
               <div class="play-badge" aria-hidden="true">
@@ -1868,7 +1857,7 @@
               <p>Ein direkter Einblick in meinen Ablauf, damit du vor deiner Anfrage schon ein Gefühl dafür bekommst, wie sauber und unkompliziert das Ganze abläuft.</p>
             </div>
           </a>
-          <a class="video-card" href="https://www.youtube.com/watch?v=TNhzN1g9MEg" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="90">
+          <a class="video-card" href="https://www.youtube.com/watch?v=TNhzN1g9MEg" target="_blank" rel="noopener noreferrer">
             <div class="video-media">
               <img src="assets/img/video-TNhzN1g9MEg.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
               <div class="play-badge" aria-hidden="true">
@@ -1886,7 +1875,7 @@
 
     <section id="contact" class="section" aria-labelledby="contact-heading">
       <div class="shell">
-        <div class="closing-card" data-aos="fade-up">
+        <div class="closing-card">
           <div>
             <div class="section-label is-inverse">Bereit für den nächsten Schritt?</div>
             <h2 id="contact-heading">Wenn du Zeit sparen und dein Fahrzeug sauber verkaufen willst, melde dich direkt bei mir.</h2>
@@ -2090,41 +2079,30 @@
 
     const floatingWhatsApp = document.querySelector('.wa-float');
     const floatingTrigger = document.getElementById('prozess');
-    function syncFloatingWhatsApp(forceShow = null) {
+    // The floating button appears once the visitor has scrolled past the hero
+    // (which has its own WhatsApp actions) and stays visible from then on.
+    function syncFloatingWhatsApp() {
       if (!floatingWhatsApp) return;
-
-      if (window.innerWidth > 719) {
-        floatingWhatsApp.classList.remove('is-hidden');
-        floatingWhatsApp.classList.add('is-visible');
-        return;
-      }
-
-      const shouldShow = forceShow ?? (() => {
-        if (!floatingTrigger) return false;
-        const rect = floatingTrigger.getBoundingClientRect();
-        return rect.top < (window.innerHeight * 0.92);
-      })();
-
+      const shouldShow = floatingTrigger
+        ? floatingTrigger.getBoundingClientRect().top < window.innerHeight * 0.92
+        : true;
       floatingWhatsApp.classList.toggle('is-visible', shouldShow);
       floatingWhatsApp.classList.toggle('is-hidden', !shouldShow);
     }
 
-    syncFloatingWhatsApp(false);
-
-    window.addEventListener('resize', () => {
-      syncFloatingWhatsApp(false);
-    }, { passive: true });
-
-    if ('IntersectionObserver' in window && floatingTrigger) {
-      const floatingObserver = new IntersectionObserver(([entry]) => {
-        syncFloatingWhatsApp(entry.isIntersecting);
-      }, {
-        threshold: 0.08,
+    let floatingTicking = false;
+    function requestFloatingSync() {
+      if (floatingTicking) return;
+      floatingTicking = true;
+      window.requestAnimationFrame(() => {
+        syncFloatingWhatsApp();
+        floatingTicking = false;
       });
-      floatingObserver.observe(floatingTrigger);
-    } else {
-      window.addEventListener('scroll', () => syncFloatingWhatsApp(), { passive: true });
     }
+
+    syncFloatingWhatsApp();
+    window.addEventListener('scroll', requestFloatingSync, { passive: true });
+    window.addEventListener('resize', requestFloatingSync, { passive: true });
   </script>
 </body>
 </html>
